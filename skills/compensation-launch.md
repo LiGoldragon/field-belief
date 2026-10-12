@@ -25,8 +25,9 @@ predecessor only after its fresh successor has accepted on a supported
 route.
 
 Launch with the required permission mode. A permission prompt reaching
-the living is a launch failure. Escalate laterally at the same power,
-then one level up; Psyche High is reached through Psyche.
+the living is a launch failure. Escalate laterally at the same layer,
+then one layer up; the Psyche Primary is reached through the Psyche
+Secondary.
 
 Messages move by level: across an aspect only at one's own layer;
 within an aspect, one layer up or any layer down. A Secondary reaches

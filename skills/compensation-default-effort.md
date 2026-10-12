@@ -1,13 +1,14 @@
 ---
 description: A model or its effort must be chosen.
-dependencies: []
+dependencies: [vision-model-roles]
 ---
 
-A model without an effort suffix uses medium. High effort belongs only to declared roles.
+A seat runs at the effort `vision-model-roles` gives its layer; a model named
+without an effort uses medium.
 
-Choose the least costly model and effort that can do the work. Extra-high
-effort, a second expensive flow in one role, or reawakening a failed
-expensive flow requires an explicit ruling.
+Choose the least costly layer that can do the work. Any other effort, a
+second expensive flow in one role, or reawakening a failed expensive flow
+requires an explicit ruling.
 
 Routine housekeeping, such as file layout, commits, or book reformatting,
 goes to the least costly capable flow; substantive design goes to the
