@@ -1,5 +1,5 @@
 ---
-description: Publish one flow's Primary paths without rewriting shared history.
+description: Primary edits are published only by the standing committer.
 ---
 
 Every flow edits Primary and leaves its owned edits for the sole standing Field Quaternary committer. No main flow or subflow stages, commits, pushes, takes a PrimaryPublish turn or lock, or rewrites Primary itself. The editing seat's turn-end hook sends its actual FLOW_ID (or explicitly labeled native session ID) and transcript path to the committer only when Primary is dirty; a clean turn sends nothing. A blocked hook or handover is reported, never replaced by a direct commit.
