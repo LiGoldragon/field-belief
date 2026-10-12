@@ -4,8 +4,12 @@ dependencies: []
 ---
 
 Launch through the harness's own flow mechanism with a one- or two-line
-brief. Repeated brief context belongs in the subagent definition. Do not
-nested-launch another harness to reach a model.
+brief. A Primary requires a live Secondary of the same aspect and topic: the
+launcher starts and verifies the Secondary first, and refuses the Primary
+if its secretary is not live. Existing declared secretary bindings count
+only while their exact native session is live. Repeated brief context
+belongs in the subagent definition. Do not nested-launch another harness
+to reach a model.
 
 The main flow delegates code, scripts, visual work, builds, and cloud
 commands to the appropriate subflow. A successor replaces its
@@ -16,8 +20,14 @@ A flow that hands work to a Primary, or to any flow above it, first gathers thro
 
 Herdr is third-party software that we never modify.
 
-Before reporting a launch as ready, verify its named Herdr session,
-colour, title, remote control, and its remote listing.
+At launch, compose every spirit-* body and the selected intent-* bodies
+into the seat's system prompt, never its startup user prompt. Every
+subagent definition carries every spirit-* body in its own instruction
+layer; it does not depend on inheriting the main seat's system prompt.
+Later intent loads through the Skill tool remain available. Before
+reporting a launch as ready, verify its named Herdr session, colour, title,
+remote control, and its remote listing, including a Primary's live
+Secondary binding.
 A flow at or above 30% of its observed context window, or 200,000
 observed tokens, receives no further work. When no supported observation
 exists, report that absence rather than inventing the threshold. Retire a
