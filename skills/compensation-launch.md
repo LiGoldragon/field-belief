@@ -4,19 +4,25 @@ dependencies: [vision-aspects, vision-model-roles]
 ---
 
 Launch a subflow through the harness's own flow mechanism. Do not
-nested-launch another harness to reach a model.
+nested-launch another harness to reach a model. A Primary starts only
+after a live Secondary for the same aspect and topic is verified; when
+none exists, the launcher starts that Secondary first and verifies its
+native binding before starting the Primary.
 
 A flow that hands work to a Primary, or to any flow above it, first gathers through its own subflows everything that work needs: the living's words whole, his comments on the books, the records and the files. It sends all of it in one message. It never sends a pointer or an instruction to go and fetch.
 
 Herdr is third-party software that we never modify.
 
 Before reporting a launch as ready, verify its named Herdr session,
-colour, title, remote control, and its remote listing.
+colour, title, remote control, and its remote listing. Every spirit-*
+module and every intent-* module selected at launch goes in the seat
+system prompt, never the startup user prompt. Each subagent carries
+every spirit-* body in its own instruction layer.
 
-A flow at or above 30% of its observed context window, or 200,000
-observed tokens, receives no further work. When no supported
-observation exists, report that absence rather than inventing the
-threshold. Retire a predecessor only after its fresh successor has
+A flow at or above its layer's configured refresh threshold receives no
+further work. Read that threshold from the layer configuration. When
+the configuration or a supported context observation is unavailable,
+report that absence rather than inventing a value. Retire a predecessor only after its fresh successor has
 answered on a supported route and its native role and binding have
 been verified; then never reuse or message it.
 
