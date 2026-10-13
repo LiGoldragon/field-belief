@@ -14,4 +14,3 @@ An empty status after the regeneration is the proof that every generated file ma
 Name the regenerator you ran, the checkout that defines it, and the source and consumer roots you passed it. The regenerator often does not live in the repository holding the authored source.
 
 Regenerate before editing the source as well, so drift already in the tree is not attributed to your change.
-
