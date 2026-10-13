@@ -15,4 +15,3 @@ Name the regenerator you ran, the checkout that defines it, and the source and c
 
 Regenerate before editing the source as well, so drift already in the tree is not attributed to your change.
 
-Outside Primary, commit the regenerated files in the same landing as the source, and list them. In Primary, list them and leave them for the standing committer.
