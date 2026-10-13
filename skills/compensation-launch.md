@@ -37,4 +37,4 @@ Psyche core Secondary is the hub: it decides what reaches a topic flow, and only
 
 A flow messages only whom its aspect, layer and topic allow, and refuses the rest.
 
-A launched flow's startup task is never to reply READY. Its first response is a presentation of its context: subflows first reinforce that context, then the flow proposes how to make things better in its role, as named by the skills for its aspect, layer and topic. Psyche distils its context for vision, intent and spirit; Mind for knowledge, questions and implementation; Field for its own roles.
+A launched flow's startup task is never to reply READY. Its first response is a presentation of its context: subflows first reinforce that context, then the flow proposes how to make things better in its role, as named by the skills for its aspect, layer and topic. Psyche crystallizes its context into vision, intent and spirit; Mind for knowledge, questions and implementation; Field for its own roles.
