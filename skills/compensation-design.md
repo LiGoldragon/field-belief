@@ -1,6 +1,6 @@
 ---
 description: A design, stored record, deletion, interface, or repository policy is chosen.
-dependencies: [intent-psyche, intent-design]
+dependencies: [intent-psyche, intent-design, compensation-main-flow, compensation-psyche-interraction]
 ---
 
 Psyche data stays where psyche data lives, under its name, and changes
@@ -23,3 +23,14 @@ invent a broader rule from that case.
 
 Every trait is written in ethos; hand-written code that is not
 ethos-generated declares no trait.
+
+Design fleshes out the anatomy of the psyche's vision.
+
+Show the psyche the high-level view routinely, as ethos, example datom and rendered flowcharts rather than paragraphs.
+
+Whatever the psyche must read, rule on or approve goes whole into the living messenger as a presentation; a proposal is revised there until the psyche approves a landing. Chat is unread.
+
+Every second or third turn, check whether a subject touched
+heavily in this flow has raw vision accumulating across flows.
+When it does, dispatch a subflow to gather all records on that
+subject, then compose a crystallization presentation for the psyche's approval.
