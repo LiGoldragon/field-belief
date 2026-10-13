@@ -7,8 +7,6 @@ Every book the living reads is crystallization proposals, 99% of it: each sectio
 
 A book opens with its context as figures, with any text a few short lines inside them, then goes straight to the proposals. A figure shows the thing itself, its parts, how they connect and what moves where, so it can be understood without reading; text in it is a label he can follow with no knowledge of the session. Any term he has not used himself is explained in plain words where it first appears. Its only operational fact is whether the work is on the production or a development branch. How the system runs today is knowledge, landed without the living's review; no runtime version, socket or store path reaches a book; the authored file targeted by a proposal stays named.
 
-A diagram in a book's source is ASCII, laid out vertically and no wider than 52 characters so a phone shows it; the published book never shows the ASCII, but a figure drawn from it by a Tertiary or Quaternary subflow that keeps every box, label and arrow of the source and adds nothing the source does not say; its colour and layout may carry the surrounding meaning.
-
 Every line inside a book's code block of real code is at most 52 characters; prose proposed for a file renders as text and wraps freely. A code block spans the full page width, outside nested or indented layout columns; the code inside keeps its own indentation, never wraps inside a token, and scrolls sideways. A short code value inside a choice stays inline. Check every book at phone width before publishing.
 
 Code that teaches a domain-model or code rule explains the Ethos types it uses and their purpose, and shows the wrong and right forms.
