@@ -20,7 +20,7 @@ system prompt, never the startup user prompt. Each subagent carries
 every spirit-* body in its own instruction layer.
 
 A flow at or above its layer's configured refresh threshold receives no
-further work. Read that threshold from the layer configuration. When
+further work. Its secretary orders its successor started at once; the successor takes its topics from the handover. Read that threshold from the layer configuration. When
 the configuration or a supported context observation is unavailable,
 report that absence rather than inventing a value. Retire a predecessor only after its fresh successor has
 answered on a supported route and its native role and binding have
