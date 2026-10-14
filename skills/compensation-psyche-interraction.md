@@ -51,8 +51,8 @@ When one message yields entries across several topics, each entry
 quotes only the words relevant to it. Omitted stretches within a
 quote are marked ` ... `.
 
-Each entry ends with a provenance line: `-- psyche, STT.` or
-`-- psyche, typed.`
+Each entry ends with a provenance line: `-- psyche, STT.`. For a book
+comment, add `, book comment` before the period: `-- psyche, STT, book comment.`
 
 Never paraphrase the psyche into a log entry without the psyche
 reviewing the proposed wording. When the psyche's own words are
