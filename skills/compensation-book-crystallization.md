@@ -3,7 +3,7 @@ description: A book for the living is being written, revised, or reviewed.
 dependencies: [vision-book]
 ---
 
-A book is its crystallizations. Every line it shows is a word removed (red) or added (green) in a psyche module, or the code that line lands. A figure in it is a figure proposed for a psyche module. Nothing else is written.
+A book is its crystallizations. Every line it shows is a word removed (red) or added (green) in a psyche module, or the code that line lands. A figure draws concepts as nodes linked by edges, with the forks, options and joins its subject has, each label a few words; its ASCII source is no wider than 52 characters. Nothing else is written.
 
 A change is written as a line File: <path>, then each removed line starting with "- ", each added line with "+ ", and unchanged lines around them starting with two spaces. Concise machine results and concrete blockers may be sent outside a book.
 
