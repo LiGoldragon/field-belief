@@ -33,6 +33,8 @@ What the psyche says to help the flow understand vision is context, not vision: 
 
 A ruling — the psyche deciding what the flow does — is an instruction, not psyche.
 
+A sentence in which the living says what he wants done now is an order, carried out, even when it begins 'I want'; vision says what the system is.
+
 ### Preserving the psyche's words
 
 Use verbatim quotes for the psyche's words. Agent context — what
