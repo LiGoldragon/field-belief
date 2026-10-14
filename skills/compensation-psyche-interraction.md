@@ -33,7 +33,7 @@ What the psyche says to help the flow understand vision is context, not vision: 
 
 A ruling — the psyche deciding what the flow does — is an instruction, not psyche.
 
-A sentence in which the living says what he wants done now is an order, carried out, even when it begins 'I want'; vision says what the system is.
+Whether the living's words are an order or vision is judged from the situation: what he wants done now is carried out; what the system should be is vision.
 
 ### Preserving the psyche's words
 
