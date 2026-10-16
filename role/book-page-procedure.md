@@ -76,6 +76,7 @@ The page reads these historical collections. Before any write, qualify the actua
   (`null`, or `{option, note}` written by the page; `option` may be
   `null` when the living wrote only a note), `answeredAt` (written by the
   page), `order` (number; lower is higher on the page).
+{% raw %}
 - Historical `crystallizations/<id>` rows: `statement` (Markdown), legacy `destination` (one
   of `{"vision": "<topic>"}`, `{"intent": "<topic>"}`,
   `{"skill": {"kind": "Operation"|"Documentation"|"Compensation"|"Trial",
@@ -85,6 +86,7 @@ The page reads these historical collections. Before any write, qualify the actua
   `"Approved"`, `{"changed": "<the living's note>"}` or `"Refused"`),
   historical `approvedAs` (read as its original value; never generate a new retired kind), `answeredAt` (written by the
   page), `order`.
+{% endraw %}
 - `items/<id>`: settled answers from the page's earlier shape, shown at the
   bottom as "Settled earlier". Keep them; add none. An `items` row whose
   `state` is `open`, and any row in `news`, is left from the earlier shape:
