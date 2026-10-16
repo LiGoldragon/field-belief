@@ -7,6 +7,6 @@ The current network topology is set by the skill variable `Network topology`.
 
 A temporary condition does not stop work: what needed the missing host builds or runs locally, or waits for it; everything else goes on.
 
-While Claude is in low-power mode, a main flow sends bounded jobs to Mind, and keeps a Claude subflow for what only Claude does, such as publishing an artifact.
+While Fable is in low-power mode, a Fable call waits for the living's word; Opus and the lighter Claude models work as usual.
 
 A condition's line is removed when it ends.
