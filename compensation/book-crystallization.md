@@ -7,11 +7,11 @@ A book is its crystallizations. Every line it shows is a word removed (red) or a
 
 A changed figure is shown once, whole, in its new form.
 
-A proposal heading reads `### Proposal N: title`.
+A proposal heading reads `### Proposal N: repository › path`, followed by `, a new file` when the file is new. The heading names the location; no `File:` line appears in the body.
 
 A page is built only by the book builder; a source it refuses goes back to its author.
 
-A change is written as a line File: <path>, then each removed line starting with "- ", each added line with "+ ", and unchanged lines around them starting with two spaces. Concise machine results and concrete blockers may be sent outside a book.
+Below the proposal heading, each removed line starts with "- ", each added line with "+ ", and unchanged lines around them with two spaces. Concise machine results and concrete blockers may be sent outside a book.
 
 Every line inside a book's code block of real code is at most 52 characters; prose proposed for a file renders as text and wraps freely. A code block spans the full page width, outside nested or indented layout columns; the code inside keeps its own indentation, never wraps inside a token, and scrolls sideways. A short code value inside a choice stays inline. Check every book at phone width before publishing.
 
