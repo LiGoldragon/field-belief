@@ -30,3 +30,9 @@ Every question in a book is one specific proposal: the exact lines it lands, in 
 Every figure in a published book is the Illustrator's drawing, passed to the builder with --figures; the builder's own drawing is never published.
 
 A book puts vision to the living's ruling; the implementation of landed vision follows without a ruling of its own.
+
+A diagram in a book's source is ASCII, no wider than52 characters; the published book never shows the ASCII, but a figure the Illustrator draws of the same idea by the illustration rules, free of the source's boxes and arrows.
+
+A proposal's heading names the file it lands in, by repository and path.
+
+A book has no technical part; technical references stay out of the book.
