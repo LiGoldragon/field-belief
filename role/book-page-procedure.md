@@ -61,8 +61,7 @@ seen.
 
 ## The page's database
 
-The page reads these collections live. Write them with `ArtifactData`
-against `The living's page`.
+The page reads these historical collections. Before any write, qualify the actual ArtifactData contract against current module identities. The old destination and approvedAs enums below are read-only historical data; they never authorize new Operation or Trial destinations. If the page API cannot represent a current destination, keep that consumer gap held and return its blocker; do not coerce the destination into a legacy kind.
 
 - `subjects/<id>`: `name` (short noun phrase), `state` (Markdown: what
   stands now, a few short sentences or a short list), `changed` (time of
@@ -77,15 +76,14 @@ against `The living's page`.
   (`null`, or `{option, note}` written by the page; `option` may be
   `null` when the living wrote only a note), `answeredAt` (written by the
   page), `order` (number; lower is higher on the page).
-- `crystallizations/<id>`: `statement` (Markdown), `destination` (exactly one
+- Historical `crystallizations/<id>` rows: `statement` (Markdown), legacy `destination` (one
   of `{"vision": "<topic>"}`, `{"intent": "<topic>"}`,
   `{"skill": {"kind": "Operation"|"Documentation"|"Compensation"|"Trial",
   "name": "<skill name>"}}`), `sources` (list of `{flowId, topic}`: the
   flow that heard each record and the record file's topic), `records`
   (list of record ids drawn on; never shown), `state` (`"Proposed"`,
   `"Approved"`, `{"changed": "<the living's note>"}` or `"Refused"`),
-  `approvedAs` (a kind, set by the page when the living said "a good skill
-  of this kind"; otherwise absent or null), `answeredAt` (written by the
+  historical `approvedAs` (read as its original value; never generate a new retired kind), `answeredAt` (written by the
   page), `order`.
 - `items/<id>`: settled answers from the page's earlier shape, shown at the
   bottom as "Settled earlier". Keep them; add none. An `items` row whose
@@ -97,14 +95,14 @@ against `The living's page`.
   `pageReadAt` (ISO time of your last read of the page's answers and
   comments). Keep this document; never delete it.
 
-The types, as the specification writes them:
+Historical read schema only; these are not writable current proposal destinations:
 
     Subject.{ Name State Vector<Waiting> Changed }
     Waiting.{ Question Proposal Vector<Option> Lost Answer }
     Answer.[ None Chosen.{ Option Note } ]
     Crystallization.{ Statement Destination Vector<Source> State }
-    Destination.[ Vision.Topic  Intent.Topic  Skill.{ Kind Name } ]
-    Kind.[ Operation Documentation Compensation Trial ]
+    LegacyDestination.[ Vision.Topic Intent.Topic Skill.{ LegacyKind Name } ]
+    LegacyKind.[ Operation Documentation Compensation Trial ]
     Source.{ FlowId Topic }
     State.[ Proposed Approved Changed.Markdown Refused ]
 
@@ -200,43 +198,19 @@ whoever said it. Then:
 
 ### 5. Propose crystallizations
 
-A ruling of the living that should outlast the conversation becomes a
-proposed crystallization with a proposed destination. The source of the
-living's words is the flow's records, `flows/<flow id>/vision/*.md`, each
-headed with its record id; use the transcript for everything else. A
-record already listed in some row's `records`, or already landed in
-`/home/li/primary/Vision/` (see `Vision/sources/<topic>.md`, one line per
-record source), is not proposed again.
+Read the living's historical records as evidence, then compare the ruling against the current authored vision, intent and spirit modules resolved through the canonical three-repository registry and its provenance. A historical page row or Primary Vision copy is not evidence that a ruling is absent from the current module. Do not propose a ruling again when the current authored module already carries it.
 
-- Crystallize as the `inquiry-psyche-crystallization` skill says: re-articulate, never
-  quote; cut what is unnecessary; the statement stands by itself; a small
-  ruling makes a small statement; no undefined term; a statement about a
-  syntax, type or wire form shows example code. One record may feed
-  several crystallizations; one crystallization may draw on several records.
-- Not crystallized: a working instruction for now (do this, tell that flow,
-  in this order); it belongs in a subject's state, if anywhere. A notion
-  (records under `notion/`) binds nothing and is not crystallized.
-- Destination:
-  - `vision` with a topic: how a thing should be. The topic is a noun a
-    flow would guess before knowing the ruling; prefer an existing file
-    name in `/home/li/primary/Vision/`.
-  - `intent`: a broad guiding rule. Propose it only when the living spoke
-    at that height.
-The living's choices on the page, and what you do with each:
+A new proposal names its current context repository, module type and subject, witnessed through registry provenance or, for a new module, its qualified type-folder destination and observed absence. Operation and Trial are retired authoring kinds. Historical rows using those kinds remain readable as history and are never silently rewritten.
 
-- `Approved`, or approved as a good skill of a kind (`approvedAs`): return
-  it to the caller, who lands it (vision through the
-  `inquiry-psyche-crystallization` skill; a skill through the flow that owns
-  it).
-  Keep the row until the transcript shows it landed, then delete it.
-- `{"changed": note}`: the note is the correction. Rewrite the statement
-  or destination as the note says, set `state` back to `"Proposed"`, and
-  clear `answeredAt`.
-- `"Refused"`: return it to the caller once, then delete the row.
+Use inquiry-psyche-crystallization to articulate the proposal from the living's records, with exact proposed lines and the current destination. A notion binds nothing. Keep open design choices distinct from ruled changes.
+
+Do not write a new crystallization destination or approvedAs value through the historical page schema until the ArtifactData consumer can represent current module identities. If it cannot, report that exact API gap and return the proposal as work data for its owner; do not encode it as an old skill kind or invent a new wire field.
+
+Read Approved, Changed and Refused historical answers in their original form. Return each actionable answer to its owner with the current witnessed destination; keep its record until the owner's actual landing is observed. The living's answer is never inferred from the old kind spelling.
 
 ### 6. Write the page
 
-All writes go in one `ArtifactData` `batch`, every entry on a document
+Only writes whose current API contract has been qualified may proceed. New crystallization and approvedAs writes remain held at the gate above. Qualified writes go in one `ArtifactData` `batch`, every entry on a document
 you read pinned with `if_version` to the version you read; a new document
 takes no pin. The batch holds at most 50 writes: when more are needed,
 write the fewest batches, subjects and waiting first, and the
