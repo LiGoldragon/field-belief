@@ -22,3 +22,7 @@ A proposal to destroy or archive a record renders unmistakably apart from a land
 Before publishing, reconcile the relevant current direction and exclude what the living has voided. A new edition carries only what is unruled or changed since the living last read it; what he approved is landed, not shown again.
 
 When the living's comments leave a topic open, a new book follows with the adaptation, or the inquiry, knowledge or compensation review it needs.
+
+A proposed code change shows the value it sets on each host, not only the name it reads it from.
+
+Every question in a book is one specific proposal: the exact lines it lands, in the named file, ruled land, amend or reject; a list of options without their lines is never asked.
