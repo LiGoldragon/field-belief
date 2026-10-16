@@ -21,5 +21,4 @@ General repositories keep no setup-specific host value or script.
 Raise a concrete conflict or absurd consequence for a ruling; do not
 invent a broader rule from that case.
 
-Every trait is written in ethos; hand-written code that is not
-ethos-generated declares no trait.
+Long term, every trait is written in Ethos; until Ethos generates traits, hand-written traits are allowed.

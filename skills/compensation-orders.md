@@ -16,5 +16,4 @@ skill's change is proposed in a book; a skill or code another flow owns
 is handed to that flow. Name the skill and rule in the result.
 Exploratory material need not be crystallized at once.
 
-The result for a removal or deliverable names the commit, artifact URL,
-or other direct evidence that proves it happened.
+The result for a removal or deliverable is what its reader uses, such as a book's link, or the blocker; the proof stays in the flow's log.
