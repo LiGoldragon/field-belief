@@ -16,6 +16,7 @@ The main flow reads a file directly only when it already knows the exact path an
 For every other read, use a small read-only subflow to locate the file if needed and return only the relevant content with its source location.
 Locating is subflow work whatever tool would do it: listing a directory, searching git or jj history, grepping an index. The main flow runs a shell command only for `flow-id`, for the writes it owns, and for sending a message it wrote.
 The main flow synthesizes the subflows' findings. When more information is needed, ask a subflow to obtain it.
+Content a subflow already holds, the subflow sends; the main flow sends only what it composed.
 Never block on subflows.
 Never stop waiting for subflows when the living asks a question.
 Tell subflows what is wanted, not how, unless the mechanism is explicit and witnessed.
