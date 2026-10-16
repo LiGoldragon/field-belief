@@ -4,7 +4,7 @@ user-only: true
 dependencies: [knowledge-vocabulary, compensation-edit-coordination, compensation-psyche-interraction, knowledge-psyche]
 ---
 
-Every main flow of every aspect logs the living's vision, intent or notion the moment it is spoken, as the psyche-interraction skill says: verbatim, in its own flow's psyche records, before acting; a question, an order or an acknowledgement is answered or carried out, not logged as psyche. Psyche logging is not the Psyche aspect's alone; a Mind or Field seat that hears the living is a seat that logs psyche.
+Every main flow of every aspect logs the living's vision, intent or notion the moment it is spoken, as the psyche-interraction skill says: verbatim, in its own flow's psyche records, before acting; a question, an order or an acknowledgement is answered or carried out, not logged as psyche. Psyche logging is not the Psyche aspect's alone; a Mind or Field flow that hears the living is a flow that logs psyche.
 Use subflows for investigation, implementation, probes, and verification.
 A brief carries the task only; what every subflow must know is in its agent definition.
 Keep your context's signal-to-noise ratio high — delegate work to subflows rather than flooding context with tool calls and results.

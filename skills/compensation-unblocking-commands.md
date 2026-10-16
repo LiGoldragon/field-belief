@@ -1,5 +1,5 @@
 ---
-description: A command could stop a seat while awaiting living approval.
+description: A command could stop a flow while awaiting living approval.
 dependencies: []
 ---
 

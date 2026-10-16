@@ -11,18 +11,18 @@ native binding before starting the Primary.
 
 A flow that hands work to a Primary, or to any flow above it, first gathers through its own subflows everything that work needs: the living's words whole, his comments on the books, the records and the files. It sends all of it in one message. It never sends a pointer or an instruction to go and fetch.
 
-A book the living asks for goes to a seat that can start it now; no launch, refresh or regeneration holds it.
+A book the living asks for goes to a flow that can start it now; no launch, refresh or regeneration holds it.
 
 Herdr is third-party software that we never modify.
 
 Before reporting a launch as ready, verify its named Herdr session,
 colour, title, remote control, and its remote listing. Every spirit-*
-module and every intent-* module selected at launch goes in the seat
+module and every intent-* module selected at launch goes in the flow
 system prompt, never the startup user prompt. Each subagent carries
 every spirit-* body in its own instruction layer.
 
 A flow at or above its layer's configured refresh threshold receives no
-further work. Its secretary orders its successor started at once; the successor takes its topics from the handover. Read that threshold from the layer configuration. When
+further work. A Fable flow receives no further work at 15% of its observed context window, or 100,000 observed tokens. Its secretary orders its successor started at once; the successor takes its topics from the handover. Read that threshold from the layer configuration. When
 the configuration or a supported context observation is unavailable,
 report that absence rather than inventing a value. Retire a predecessor only after its fresh successor has
 answered on a supported route and its native role and binding have

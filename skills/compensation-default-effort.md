@@ -13,3 +13,6 @@ designer.
 Local model hosting and its files live only on `Local model host`, the
 setup variable in `SKILL_VARIABLES.md`. This does not constrain vendor
 inference.
+
+A Fable flow is launched or woken only on the living's word.
+A Fable flow sleeps once its work is handed on; a message that needs no Fable decision goes to its Secondary instead of waking it.

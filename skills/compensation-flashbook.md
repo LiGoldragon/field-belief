@@ -3,7 +3,7 @@ description: A flashbook must be made from a source written in a flow's transcri
 dependencies: [compensation-flashbook-illustration, compensation-behavior, knowledge-vocabulary]
 ---
 
-A flashbook is a short illustrated book the living reads, one subject per book, made from Markdown a higher psyche seat wrote in its transcript under an exact title. Find the exact Presentation block by title between its to-the-living
+A flashbook is a short illustrated book the living reads, one subject per book, made from Markdown a higher psyche flow wrote in its transcript under an exact title. Find the exact Presentation block by title between its to-the-living
 markers using tools/book-fetch.mjs --block, or use the source file named in the
 brief. Check that source with tools/book-check.mjs and publish through the book
 subflow; never cut it at a heading or edit its proposals.

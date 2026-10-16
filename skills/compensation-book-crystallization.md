@@ -38,3 +38,5 @@ A proposal's heading names the file it lands in, by repository and path.
 A book has no technical part; technical references stay out of the book.
 
 A book is published only when every section is a proposal that names the file it lands in and carries the lines it adds, with no technical part; any other source goes back to its author unpublished.
+
+A book has no technical part: files, paths, commits, branches and identifiers appear only in its proposal headings.
