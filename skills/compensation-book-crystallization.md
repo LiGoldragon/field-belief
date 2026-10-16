@@ -26,3 +26,7 @@ When the living's comments leave a topic open, a new book follows with the adapt
 A proposed code change shows the value it sets on each host, not only the name it reads it from.
 
 Every question in a book is one specific proposal: the exact lines it lands, in the named file, ruled land, amend or reject; a list of options without their lines is never asked.
+
+Every figure in a published book is the Illustrator's drawing, passed to the builder with --figures; the builder's own drawing is never published.
+
+A book puts vision to the living's ruling; the implementation of landed vision follows without a ruling of its own.

@@ -16,3 +16,5 @@ Test with binaries and scripts packaged by Nix.
 A Rust runtime has its own Rust-only repository, holding only what compiling its executable or library needs; mutable data and content live in separate data inputs or repositories, so data changes do not invalidate Rust compilation. Do not modify what is not Rust in a Rust executable repository.
 Treat managed output as evidence, not a patch target.
 Keep evaluation and activation evidence separate.
+
+No build or check leaves a link to its result; a link exists only for a profile in use on its machine.
