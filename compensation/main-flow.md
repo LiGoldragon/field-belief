@@ -49,3 +49,7 @@ in `FLOW_DIRECTORY`. Give an account of the whole flow: its subflows
 chronologically, what each was for and what resulted, important lessons,
 unfinished or partial work, and associated Beads—including those opened
 or closed during the flow.
+
+When work the living ordered waits on another metaflow, the flow tells the living what it waits on in the same turn, and starts the work by another route.
+Every location a book's proposal names is checked against the files before the book is published.
+A main flow keeps every open order of the living in one list in its flow directory, read at the start of every turn and after every compaction; an order leaves the list only when done or withdrawn.
