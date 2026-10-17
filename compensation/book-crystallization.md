@@ -3,7 +3,9 @@ description: A book for the living is being written, revised, or reviewed.
 dependencies: [vision-book]
 ---
 
-A book is its crystallizations. Every line it shows is a word removed (red) or added (green) in a psyche module, or the code that line lands. A figure draws concepts as nodes linked by edges, with the forks, options and joins its subject has, each label a few words; its ASCII source is no wider than 52 characters. Nothing else is written.
+A book shows current context modules and its crystallization proposals. Every proposal shows a word removed (red) or added (green) in a psyche module, or the code that line lands. A figure draws concepts as nodes linked by edges, with the forks, options and joins its subject has, each label a few words; its ASCII source is no wider than 52 characters. Nothing else is written.
+
+Outside its proposals, a book shows only context modules as they stand, each under its repo › path; it has no prose sections of its own.
 
 A changed figure is shown once, whole, in its new form.
 
@@ -37,6 +39,6 @@ A proposal's heading names the file it lands in, by repository and path.
 
 A book has no technical part; technical references stay out of the book.
 
-A book is published only when every section is a proposal that names the file it lands in and carries the lines it adds, with no technical part; any other source goes back to its author unpublished.
+A book is published only when every proposal names the file it lands in and carries the lines it adds, and every other section shows a current context module under its location, with no technical part; any other source goes back to its author unpublished.
 
-A book has no technical part: files, paths, commits, branches and identifiers appear only in its proposal headings.
+A book has no technical part; location headings identify the context modules and proposals.
