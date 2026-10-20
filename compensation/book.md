@@ -7,7 +7,6 @@ Make one new presentation for each message. A presentation is a new living-messe
 
 Present the source faithfully and simply. The living responds by comment; use no buttons, fields, or other controls.
 
-A figure draws concepts as nodes linked by edges, with the forks, options and joins its subject has, each label a few words; its ASCII source is no wider than 52 characters.
 The book subflow obtains each figure from the Illustrator role composed by Curriculum; the page carries the resulting inline SVG, readable on a phone, never the ASCII or Mermaid.
 
 A presentation renders as a web page, never raw Markdown or prose in a code block. A proposed change shows its additions in green and its removals struck through in red, in one consistent style across books.

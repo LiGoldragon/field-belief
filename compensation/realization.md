@@ -1,7 +1,7 @@
 ---
 description: The flow is realizing — psyche is realized into code.
 user-only: true
-dependencies: [compensation-main-flow, compensation-psyche-interraction, compensation-testing]
+dependencies: [compensation-psyche-interraction, compensation-testing]
 ---
 
 Realization brings design into reality and proves it there.

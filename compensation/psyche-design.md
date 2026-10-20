@@ -1,7 +1,7 @@
 ---
 description: The psyche is designing — vision anatomy is fleshed out.
 user-only: true
-dependencies: [compensation-main-flow, compensation-psyche-interraction]
+dependencies: [compensation-psyche-interraction]
 ---
 
 Design fleshes out the anatomy of the psyche's vision.
