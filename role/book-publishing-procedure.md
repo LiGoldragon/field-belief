@@ -10,6 +10,8 @@ Use the configured book builder for the complete page. A source it refuses retur
 
 Obtain figures directly from the Illustrator role composed by Curriculum and pass the resulting SVGs with --figures. A figure the builder refuses goes back to the Illustrator with the builder's exact refusal for retry. Keep artwork outside Primary. The builder's own drawing is never published. Do not introduce another drawing or model-review stage.
 
-Preserve the local source. A prior URL supplies comment context, never replacement source. Every revised presentation has its own source and page and a fresh artifact; preserve the older publication and its comments.
+Preserve the local source. Build to `FLOW_DIRECTORY/publications/<source-path-digest>/<source-basename>.html`, where `source-path-digest` is the SHA-256 digest of the source's canonical path. A fixed or caller-independent output such as the scratchpad's `book.html` is forbidden. A prior URL supplies comment context, never replacement source. Every revised presentation has its own source and page and a fresh artifact; preserve the older publication and its comments.
+
+On a first publication, call Artifact without a URL. Record the returned URL beside the canonical source path in `FLOW_DIRECTORY/book-publications`. A URL may be supplied only to republish that exact source: first witness the source-to-URL record, identify the hosted book with Artifact, and inspect its threads with ArtifactComments. Refuse URL reuse when the record or hosted identity differs. Refuse a URL that has comments unless this is the recorded source's own republish; a revised presentation is not a republish.
 
 Publish the builder's resulting page once with Artifact and return its title and URL to the requester who acts on it. If publishing fails, return the concrete blocker. Do not copy a page read back from the host over its local source.
