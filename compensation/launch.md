@@ -21,12 +21,15 @@ module and every intent-* module selected at launch goes in the flow
 system prompt, never the startup user prompt. Each subagent carries
 every spirit-* body in its own instruction layer.
 
-A flow at or above its layer's configured refresh threshold receives no
-further work. A Fable flow receives no further work at 15% of its observed context window, or 100,000 observed tokens. Its secretary orders its successor started at once; the successor takes its topics from the handover. Read that threshold from the layer configuration. When
-the configuration or a supported context observation is unavailable,
-report that absence rather than inventing a value. Retire a predecessor only after its fresh successor has
-answered on a supported route and its native role and binding have
-been verified; then never reuse or message it.
+When a flow's context passes its model's threshold, Flow tells it nothing
+and requests no handover. It sends the flow no new message and keeps the
+metaflow's next messages for its next flow. Flow replaces the old flow as
+it goes idle, locks the metaflow during refresh, and reaps the predecessor
+in the same event. Each model's threshold is configured in Flow; an OpenAI
+model's threshold is lower than a Claude model's. Read the threshold from
+that model's configuration. When the configuration or a supported context
+observation is unavailable, report that absence rather than inventing a
+value. Never reuse or message the reaped predecessor.
 
 Launch with the required permission mode. A permission prompt reaching
 the living is a launch failure. Escalate laterally at the same layer,
