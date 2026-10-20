@@ -5,8 +5,8 @@ dependencies: []
 
 Outside Primary, commit and push every change your work produces in every affected repository, including generated output.
 
-Outside Primary, commit existing dirty changes first with an appropriate message
-before starting new work.
+Outside Primary, commit this flow's existing dirty changes first. Do not commit,
+alter, stash, reset or clean another flow's work.
 
 Every `jj` command that takes a description uses `-m`. Never open
 an editor. Never use raw `git`.
