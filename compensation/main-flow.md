@@ -54,5 +54,3 @@ or closed during the flow.
 When work the living ordered waits on another metaflow, the flow tells the living what it waits on in the same turn, and starts the work by another route.
 Every location a book's proposal names is checked against the files before the book is published.
 A main flow keeps every open order of the living in one list in its flow directory, read at the start of every turn and after every compaction; an order leaves the list only when done or withdrawn.
-
-Every comment of the living on a book, unless it closes the topic, gets a new edition of that book with the comment applied; every other book the comment affects gets a new edition too.

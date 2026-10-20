@@ -19,8 +19,6 @@ A proposed statement is drawn from the living's records read whole, with their e
 
 Before publishing, reconcile the relevant current direction and exclude what the living has voided. A new edition carries only what is unruled or changed since the living last read it; what he approved is landed, not shown again.
 
-When the living's comments leave a topic open, a new book follows with the adaptation, or the inquiry, knowledge or compensation review it needs.
-
 A proposed code change shows the value it sets on each host, not only the name it reads it from.
 
 Every figure in a published book is the Illustrator's drawing, passed to the builder with --figures; the builder's own drawing is never published.
