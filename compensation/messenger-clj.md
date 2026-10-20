@@ -6,13 +6,13 @@ dependencies: [vision-messaging]
 A flow sends, binds and launches through the `flow` command. It takes exactly one inline datom and no flags. Flow names the sender from the calling process: the Herdr pane the process runs in or, for a Codex command, the thread its app-server names. No command carries the sender's id.
 
 ```sh
-flow 'Send.{ Address.{ Mind core Secondary } Soft.Order.«Review the drain fix in flow 379e7a-send.» }'
-flow 'Send.{ Up Soft.Result.«Published: https://claude.ai/artifact/…» }'
-flow 'Send.{ Address.{ Psyche core Secondary } Soft.Psyche.{ «context» «verbatim» } }'
-flow 'Send.{ Address.{ Psyche core Secondary } Soft.Psyches.[ { «context» «verbatim» } { «context» «verbatim» } ] }'
+flow 'Send.{ Address.{ Mind core Secondary } MiddleAbrupt.Order.«Review the drain fix in flow 379e7a-send.» }'
+flow 'Send.{ Up MiddleAbrupt.Result.«Published: https://claude.ai/artifact/…» }'
+flow 'Send.{ Address.{ Psyche core Secondary } MiddleAbrupt.Psyche.{ «context» «verbatim» } }'
+flow 'Send.{ Address.{ Psyche core Secondary } MiddleAbrupt.Psyches.[ { «context» «verbatim» } { «context» «verbatim» } ] }'
 ```
 
-The recipient is a metaflow, `Address.{ Aspect topic Layer }`, or `Up`, the layer above in the sender's aspect and topic. The head on the request is its priority. `Soft` waits for the recipient to finish its turn. `MiddleAbrupt` reaches it at its next tool boundary. `HardAbrupt` interrupts its turn. Under the priority comes the kind: `Order`, `Question`, `Result`, `Notice`, `Psyche.{ «context» «verbatim» }` or `Psyches.[ … ]`. An Order, a Question or the living's words wake a sleeping metaflow. A Result or a Notice waits for its next wake. A string with a space or a delimiter is written in guillemets, and a closing guillemet inside it is written `\»`.
+The recipient is a metaflow, `Address.{ Aspect topic Layer }`, or `Up`, the layer above in the sender's aspect and topic. The head on the request is its priority. A message is sent `MiddleAbrupt`: it is typed into the recipient’s pane and reaches it at its next tool boundary, or at once when it rests. `Soft` only queues: it is handed over when the recipient next ends a turn, never to a resting recipient, so it is used only for what may wait. `MiddleAbrupt` reaches it at its next tool boundary. `HardAbrupt` interrupts its turn. Under the priority comes the kind: `Order`, `Question`, `Result`, `Notice`, `Psyche.{ «context» «verbatim» }` or `Psyches.[ … ]`. An Order, a Question or the living's words wake a sleeping metaflow. A Result or a Notice waits for its next wake. A string with a space or a delimiter is written in guillemets, and a closing guillemet inside it is written `\»`.
 
 The living's words travel only as `Psyche` or `Psyches`, never quoted, paraphrased or summarized inside an Order or a Result. A message that rests on his words sends two messages: the psyche, then the flow's own.
 
