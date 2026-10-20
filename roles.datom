@@ -1,11 +1,11 @@
-{ lander CodexAgent gpt-5.6-luna Low
+{ lander CodexAgent luna Low
   Unrestricted role-lander-description
   [ spirit-core intent-context
     role-lander-finding role-lander-landing
     role-lander-deploying ]
   Inherit Any }
 
-{ lander ClaudeAgent claude-haiku-4-5 Low
+{ lander ClaudeAgent haiku Low
   Unrestricted role-lander-description
   [ spirit-core intent-context
     role-lander-finding role-lander-landing
