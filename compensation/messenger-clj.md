@@ -1,24 +1,36 @@
 ---
-description: A flow runs an hm-* command, reads its output, or changes messenger-clj.
+description: A flow sends a message to another flow, binds its seat, or launches or stops a flow through the Flow CLI.
 dependencies: [vision-messaging]
 ---
 
-The `hm-*` shorthands are provided by the standalone messenger-clj repository under `Repository root`, on its default branch. Use `hm-send` for flow-to-flow messages, never a shell script, paste, or another intercom.
+A flow sends, binds and launches through the `flow` command. It takes exactly one inline datom and no flags. Flow names the sender from the calling process: the Herdr pane the process runs in or, for a Codex command, the thread its app-server names. No command carries the sender's id.
 
-`FLOW_ID=<self> hm-send TARGET BODY` sends one complete machine body as `#msg [sender machine-prose]`. Use `--stdin` in place of `BODY` for a large or multiline body. `FLOW_ID=<self> hm-send TARGET --psyche CONTEXT VERBATIM` sends the living's words, context first, as one `#psyche [sender context whole-verbatim]`; `--psyche CONTEXT --stdin` reads the verbatim from standard input. `FLOW_ID=<self> hm-send TARGET --psyches --stdin` reads one EDN vector of `[context verbatim]` pairs and sends them as one `#psyches` envelope. Pass message fields, never a prebuilt envelope. `hm-send-abrupt` takes the same arguments and interrupts the target's active turn first. Flows refer to one another by the registered, space-separated meta-flow identifier, such as `Psyche core Secondary`. Quote it as one TARGET argument and use its registered topic case. Internal flow IDs are audit keys, not public command targets. The origin of every live `#msg`, `#psyche` and `#psyches` is the sender registration's aspect, topic and layer with spaces, never dots, a model, a guessed title or a truncated native UUID. Missing sender registration or any required metadata refuses the send; missing or ambiguous named TARGET refuses it.
+```sh
+flow 'Send.{ Address.{ Mind core Secondary } Soft.Order.«Review the drain fix in flow 379e7a-send.» }'
+flow 'Send.{ Up Soft.Result.«Published: https://claude.ai/artifact/…» }'
+flow 'Send.{ Address.{ Psyche core Secondary } Soft.Psyche.{ «context» «verbatim» } }'
+flow 'Send.{ Address.{ Psyche core Secondary } Soft.Psyches.[ { «context» «verbatim» } { «context» «verbatim» } ] }'
+```
 
-The living's words travel only as psyche, never quoted, paraphrased or summarized inside a `#msg` body. A message that rests on his words sends two messages: the psyche, then the flow's own `#msg`. Write the recipient-facing body only.
+The recipient is a metaflow, `Address.{ Aspect topic Layer }`, or `Up`, the layer above in the sender's aspect and topic. The head on the request is its priority. `Soft` waits for the recipient to finish its turn. `MiddleAbrupt` reaches it at its next tool boundary. `HardAbrupt` interrupts its turn. Under the priority comes the kind: `Order`, `Question`, `Result`, `Notice`, `Psyche.{ «context» «verbatim» }` or `Psyches.[ … ]`. An Order, a Question or the living's words wake a sleeping metaflow. A Result or a Notice waits for its next wake. A string with a space or a delimiter is written in guillemets, and a closing guillemet inside it is written `\»`.
+
+The living's words travel only as `Psyche` or `Psyches`, never quoted, paraphrased or summarized inside an Order or a Result. A message that rests on his words sends two messages: the psyche, then the flow's own.
+
+A flow reaches every metaflow of its own aspect. Across aspects it reaches only the same topic at the same layer. Field reaches Psyche only after Psyche has sent to it. Any other Send is refused `Refused.OffRoute`; the message then goes through the flow's own aspect, to the Secondary of the recipient's topic.
+
+The reply is what `flow` prints. A flow never waits on or watches the target for an answer. The reply stays with the sender: it is acted on and logged, never forwarded.
+- `Queued`: the request is held for the metaflow, which takes it at its next rest or wake.
+- `Delivered`: an abrupt message was typed into the recipient's pane. That is not a read receipt.
+- `Refused.Unknown.Address.{ … }`: Flow holds no such metaflow.
+- `Refused.Unidentified.{ … }`: the sender's seat is not bound; bind it as below.
+- `Refused.OffRoute`: see the routes above.
+- `Refused.NoneAbove`: `Up` from a Primary.
+- `Refused.Held.{ … }`: Message holds the recipient. Send again once it releases.
+
+A seat Flow did not start binds itself once, from inside the seat: `flow 'BindSeat.{ Mind tools Secondary }'` prints `Bound.47d946`. The id is the claim of the seat's native session. `Refused.Taken.{ … }` means another live flow holds the address.
+
+`flow 'Launch.{ { Mind core Secondary } «brief» }'` starts the metaflow from its declaration in Flow's configuration: its modules, the model of its layer and aspect, its effort and its leave-outs. The brief is the one string given that flow alone. A Launch from the flow the address is Awake as replaces that flow. `StartRejected.Undeclared` means the address has no declaration. `flow 'Metaflows'` and `flow 'Current.{ Psyche core Secondary }'` show the metaflows. `flow 'Stop.<flow id>'` stops a flow.
 
 Work goes straight to the flow that acts on it next. A flow that finishes a package hands it directly to the flow that turns it into the deliverable, such as a Tertiary book subflow that publishes it. The ordering flow hears only about a blocker, a needed ruling, or a finished deliverable it must itself act on.
 
-Before sending, establish that the recipient holds the work and is live. A Codex delivery is relied on once hm-send prints Presented; nothing more is sought from the recipient.
-
-The typed reply is what hm-send itself prints; a flow never waits on or watches the target for an answer. What hm-send prints stays with the sender: it is acted on and logged, never forwarded. `Transported` is Herdr's acceptance for the checked binding. `Presented` includes the observed reaction of the target. `Held` means nothing was typed and the whole body is pending until an explicit supported delivery action; its printed reason names the refusal. `RepairRequired` means the recorded candidates must be judged and the route repaired with `hm-repair`. `Uncertain` means the envelope may have arrived: inspect the target and never retry blindly. A refused or undelivered send is reported to the sending flow and its route is mended.
-
-`hm-register TARGET AGENT_NAME [--session SESSION] [--native-thread UUID]` validates one exact live Herdr identity and stores its native binding; send readiness is checked separately. TARGET is the quoted registered `Aspect topic Layer` name; AGENT_NAME is the exact Herdr agent name, not a Flow ID. Metadata comes from TARGET. Optional `--aspect ASPECT --topic TOPIC --layer LAYER` flags must be supplied together and match it. A new registration requires the actual claimed runtime identity from the supported launcher; a native UUID or a guessed ID does not establish it. Historical ID-bearing envelopes remain audit evidence.
-
-`FLOW_ID=<self> hm-retire TARGET` takes the registered, space-separated metaflow name as one quoted argument, for example `hm-retire "Psyche core Secondary"`. It validates the recorded route against the exact live Herdr identity and retains retirement evidence. Success prints `Retired.{ «Psyche core Secondary» }`; a refusal prints `RetireRefused.{ «Psyche core Secondary» Reason }` and changes nothing. Registry retirement does not stop or sleep the native flow.
-
-Flow lifecycle controls are separate from messenger retirement. The current Flow contracts expose `Stop.FlowId` and privileged `Retire.FlowId`; they provide no public-name sleep operation. Until a supported public-name control route is supplied, report that missing contract rather than constructing `Sleep.Address` or substituting `hm-retire`.
-
-A message carries something the recipient must act on or a blocker; a flow never asks for, or sends, a receipt, a commit id or an acknowledgement on its own.
+A message carries something the recipient must act on or a blocker. A flow never asks for or sends a receipt, a commit id or an acknowledgement on its own. A messaging test sends one message, to a flow that needs that message anyway or to a Quaternary test flow started for it and stopped after. It never goes to every flow, and never wakes a Primary.
