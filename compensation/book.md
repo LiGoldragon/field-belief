@@ -20,7 +20,5 @@ A change to the book builder rebuilds every published book and compares it with 
 After publication is complete, return its title and URL to the requester
 with a very short voice answer to the question.
 
-Use the book role composed by Curriculum to publish the exact source. Check it with tools/book-check.mjs before rendering. A non-Claude
-caller sends its source to its Secondary; it
-does not hand-render a replacement page. If the source lacks crystallization,
+Use the book role composed by Curriculum to publish the exact source. Check it with tools/book-check.mjs before rendering. A Secondary that has written a book source hands it to a Tertiary flow, which checks, builds, publishes and returns the link; the Secondary does not run the publishing steps itself. If the source lacks crystallization,
 return the defect to its author rather than adding a proposal.
