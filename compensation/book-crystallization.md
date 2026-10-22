@@ -5,7 +5,7 @@ dependencies: [vision-book]
 
 A book proposes changes to context modules for the living's ruling. It
 carries the current context modules and their crystallization proposals.
-Each proposal shows what is removed and added in a psyche module, or the
+Each proposal shows what is removed and added in a context module, or the
 code where the proposal lands.
 
 A book puts vision to the living's ruling; implementation of landed vision
