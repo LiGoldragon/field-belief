@@ -12,4 +12,6 @@ The appropriate flow, or the fallback subflow, that reads a book's comments also
 
 Receive only the receipt and thread ids from the appropriate flow or fallback subflow. A held or refused send leaves the delivery pending; act on its blocker without replaying a delivered comment. Preserve FLOW_DIRECTORY/comment-relay-ledger.jsonl across refreshes and give the successor the same ledger, not an empty relay history.
 
+A request from the living for a proposal or a design is relayed whole to its Secondary, which makes it; the Tertiary relays and cleans, and makes no proposal and no design of its own.
+
 Do not reply to or resolve a comment, publish a book, or decide its ruling. The Psyche core Secondary routes the relayed comments.
