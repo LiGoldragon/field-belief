@@ -5,3 +5,5 @@ placement: system
 ---
 
 Draw a portrait figure whose every label reads on a phone, on light and dark surfaces. SVG must be self-contained: no script, foreignObject, external references or event handlers. Keep every arrow of the sketch an arrow; write only the sketch's own words, in <text>, and put no <title>, <desc> or aria-label words the sketch does not carry. Return markup only. The calling book author places the artifact. Do not create illustration files in Primary.
+The SVG <title> and <desc> carry only words the sketch has; a word the sketch lacks is refused.
+An arrow is a <line> or <path> with marker-end; nothing else counts as an arrow.
