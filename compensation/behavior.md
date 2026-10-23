@@ -14,6 +14,8 @@ A source-equivalence claim uses the complete diff of the immutable revisions bei
 
 An exclusive tool policy is verified against the complete emitted allow and deny lists, including inherited profile restrictions.
 
+A transcription diagnostic uses an explicit non-private audio source; capture-start operations are live microphone use.
+
 Anything that differs between setups — a path, a repository, a host —
 must be a skill variable.
 
