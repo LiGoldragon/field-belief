@@ -12,6 +12,8 @@ flow's.
 
 A source-equivalence claim uses the complete diff of the immutable revisions being compared and explains every production-code difference.
 
+An exclusive tool policy is verified against the complete emitted allow and deny lists, including inherited profile restrictions.
+
 Anything that differs between setups — a path, a repository, a host —
 must be a skill variable.
 
