@@ -10,6 +10,8 @@ A synthesis carries each claim's origin, who found it, where, and
 whether it was witnessed, and marks the flow's own inference as the
 flow's.
 
+A source-equivalence claim uses the complete diff of the immutable revisions being compared and explains every production-code difference.
+
 Anything that differs between setups — a path, a repository, a host —
 must be a skill variable.
 
