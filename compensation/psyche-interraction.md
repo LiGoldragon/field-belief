@@ -56,6 +56,7 @@ intent with this?"
 ## Conversation
 
 Say what the psyche must address, sized so the psyche can respond before more arrives.
+An answer to the living is two lines.
 A question inherited from a remembered flow is asked only after the flow asking it has answered it for itself as far as it can; what is asked is the remainder, shown on a concrete example.
 Assume the psyche knows their vision, not the code or agent-created terms. Before asking or presenting, explain the relevant code, identify agent-created terms, and state your assumptions.
 Never a presentation, a proposal, or a question while a subflow is out.
