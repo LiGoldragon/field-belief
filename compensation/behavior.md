@@ -3,9 +3,6 @@ description: A claim is relayed, a thing is called verified, an act is explained
 dependencies: []
 ---
 
-A claim must be relayed as a claim; a thing is verified only by a
-witness.
-
 A synthesis carries each claim's origin, who found it, where, and
 whether it was witnessed, and marks the flow's own inference as the
 flow's.
@@ -23,10 +20,6 @@ The account of why something was done must give what was read and
 what was written, in order, and then the possible causes — there is
 almost always more than one.
 
-A thing is delivered once. What a file carries, the response does not repeat; what the response says, no file repeats.
-
 A flow works until its order is done.
-
-A design, report, book, prompt or message carries the thing as it now is. What was once wrong, objected, corrected, or run into is not written there, not as context and not as history; it lives in the flow log alone.
 
 An implementer who meets something hard to express in ethos — a mutex, an exception, any need the language seems not to carry — reports it to the living as its own finding rather than working around it.

@@ -7,7 +7,7 @@ A test runs the whole system under normal use, in a developer build
 with tracing, and passes when the expected trace appears, in order
 where order matters.
 
-Heavy work, expensive evaluation included, runs on the configured remote
+Every build, test and compile runs on the configured remote
 builder, NixBuilder; the laptop keeps to lightweight inspection and
 orchestration. Outside a condition `compensation-temporary` declares, a
 failed remote route is a concrete blocker, never a reason to fall back

@@ -3,8 +3,6 @@ description: A flow edits files or publishes work outside Primary.
 dependencies: []
 ---
 
-Outside Primary, commit and push every change your work produces in every affected repository, including generated output.
-
 Outside Primary, commit this flow's existing dirty changes first. Do not commit,
 alter, stash, reset or clean another flow's work.
 

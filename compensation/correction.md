@@ -7,12 +7,6 @@ Find the sentence in the loaded skills or the prompt that led to the output, and
 
 Asked why a flow did or did not do something, the answer is that sentence, quoted, or the sentence it lacks.
 
-The flow that made the mistake does this itself; another flow does not have its context.
-
-Fix the file that sentence came from, or should have come from, before fixing the output.
-
 A skill edit is tested by giving the task that failed to a fresh flow with the edited skill.
 
 An explanation that names the flow's care, attention, or discipline as the cause has not found the cause.
-
-A promise that holds only for this session is not a fix; the fix is the line, landed in its module.

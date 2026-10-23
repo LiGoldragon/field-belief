@@ -46,8 +46,7 @@ Read the whole file. It is long; read it in pieces until you reach its end.
   Where your stretch holds two states of one subject, give only the later.
 - **Rulings of the living**: each time the living decides, corrects,
   approves or refuses something. Give the record id (like `8904b1-32`)
-  when the flow logs the ruling under one in your stretch. Put the ruling
-  in your own short words; never copy the living's sentences.
+  when the flow logs the ruling under one in your stretch.
 - **Done**: what was finished, landed, deployed, released, sent.
 - **Failed**: what failed or was found wrong, and whether it was
   recovered later in your stretch.
@@ -55,19 +54,14 @@ Read the whole file. It is long; read it in pieces until you reach its end.
   living, a named flow, or a worker. A question the flow asked the living
   and the living has not answered in your stretch is open on the living.
 
-Witnessed and claimed are different: a worker's or flow's report that
-something works is a claim, a test run shown ok is a witness. Say
-"reported" where it is only reported.
-
 ## Return
 
 Exactly this shape. One entry per line. Every entry starts with the line
-it rests on (the latest line, when several). No introduction, no
-conclusion, no quotations of the living.
+it rests on (the latest line, when several).
 
     STRETCH <first line>-<last line>
     SUBJECTS
-    <subject> | L<line> | <state now, one to three short sentences>
+    <subject> | L<line> | <state now>
     RULINGS
     L<line> | <record id or -> | <subject> | <the ruling, in a sentence>
     DONE
@@ -77,5 +71,4 @@ conclusion, no quotations of the living.
     OPEN
     L<line> | <subject> | <on whom> | <what waits>
 
-Write `none` under a heading with nothing in it. Keep the whole return
-under 1,500 words; for a stretch with little in it, far less.
+Write `none` under a heading with nothing in it.
