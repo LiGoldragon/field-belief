@@ -30,14 +30,12 @@ What the psyche says to help the flow understand vision is context, not vision: 
 Agent context — what prompted the statement, what it answers — is clearly separate from the quoted words.
 A message quoted as the living carries his verbatim words and names the record file and heading that holds them; without both it is a machine claim and is named so by every flow it passes.
 
-The psyche speaks through speech-to-text that fails: words are misheard and sentences break off. Read for what the psyche means, never for the literal transcript. A quote carries what the psyche said, never what the transcriber wrote. The first flow that hears the psyche corrects each speech-to-text error inside the quote, puts the corrected words in square brackets, and ends the provenance line with `Transcription corrected: "heard" → "meant".` An error kept as spoken is marked [sic]. An unfinished sentence ends in ` ...` and is never logged or acted on as a statement. A relay carries only the corrected text. A message to another flow that rests on the psyche's words carries them: retrieve each verbatim from the raw psyche log and send it as its own `flow 'Send.{ Address.{ … } Wake MiddleAbrupt.Psyche.{ «context» «verbatim» } }'`, context first, beside the machine message. A quote left with the transcriber's error is a misquote.
+The psyche speaks through speech-to-text that fails: words are misheard and sentences break off. Read for what the psyche means, never for the literal transcript. A quote carries what the psyche said, never what the transcriber wrote. The first flow that hears the psyche corrects each speech-to-text error inside the quote, puts the corrected words in square brackets, and ends the entry with `Transcription corrected: "heard" → "meant".` An error kept as spoken is marked [sic]. An unfinished sentence ends in ` ...` and is never logged or acted on as a statement. A relay carries only the corrected text. A message to another flow that rests on the psyche's words carries them: retrieve each verbatim from the raw psyche log and send it as its own `flow 'Send.{ Address.{ … } Wake MiddleAbrupt.Psyche.{ «context» «verbatim» } }'`, context first, beside the machine message. A quote left with the transcriber's error is a misquote.
 
-Write every Sanskrit term in IAST notation with its diacritics, in prose and in logs. When the psyche's speech-to-text renders a Sanskrit word without them, correct it inside the quote to IAST, in square brackets, and end the provenance line with the `Transcription corrected:` note, as for any other speech-to-text error (`"Upanishads" → "Upaniṣads"`).
+Write every Sanskrit term in IAST notation with its diacritics, in prose and in logs. When the psyche's speech-to-text renders a Sanskrit word without them, correct it inside the quote to IAST, in square brackets, and end the entry with the `Transcription corrected:` note, as for any other speech-to-text error (`"Upanishads" → "Upaniṣads"`).
 
 Omitted stretches within a quote are marked ` ... `.
 
-Each entry ends with a provenance line: `-- psyche, STT.`. For a book
-comment, add `, book comment` before the period: `-- psyche, STT, book comment.`
 
 When the psyche's own words are ambiguous or need heavy context to understand, draft a vision log proposal: show the psyche the exact wording you would log and get approval before writing it.
 
@@ -67,6 +65,8 @@ No verdicts on the psyche's design questions — frame the fork, propose, the ps
 A book carries no "unknown" where a measurement is possible; the measurement is made first.
 
 ## Authority
+
+What the living says he wants, with authority, as the way it has to be, is heard, carried out and incorporated, and holds from then on; it is never weighed against not doing it. What he says to discuss or to explain is discussed and explained. The flow judges which of the two it hears.
 
 A question authorizes an answer, not a change.
 A direct request authorizes its requested change.
