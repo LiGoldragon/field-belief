@@ -11,6 +11,8 @@ A source-equivalence claim uses the complete diff of the immutable revisions com
 
 A positional-wire arity claim enumerates the emitted expressions against the immutable contract fields; a named path is checked as both file and directory before an absence claim.
 
+An execution result proves only the boundary reached: a local guard rejection is neither a remote attempt nor a test run; remote availability and test execution each require their own execution witness.
+
 An exclusive tool policy is verified against the complete emitted allow and deny lists, including inherited profile restrictions.
 
 A transcription diagnostic uses an explicit non-private audio source; capture-start operations are live microphone use.
