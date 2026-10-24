@@ -13,6 +13,8 @@ A positional-wire arity claim enumerates the emitted expressions against the imm
 
 An execution result proves only the boundary reached: a local guard rejection is neither a remote attempt nor a test run; remote availability and test execution each require their own execution witness.
 
+A test result is attributed to a revision only when the tested immutable source equals that revision; a derived source carries its complete diff, dependency revisions and artifact hashes.
+
 An exclusive tool policy is verified against the complete emitted allow and deny lists, including inherited profile restrictions.
 
 A transcription diagnostic uses an explicit non-private audio source; capture-start operations are live microphone use.
