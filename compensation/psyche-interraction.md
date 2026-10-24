@@ -12,6 +12,7 @@ Thinking out loud, bouncing ideas, and any words the psyche frames as exploratio
 
 Log psyche as it is spoken.
 Every word the living says to the core Secondary or to a flow below it reaches the core Primary the moment it is heard, with what was landed from it.
+A chat turn is the living's words only when it carries no other speaker; a ruling numbered and sent by a Primary is that Primary's ruling, and is logged in the flow log, never as psyche.
 Order each topic log oldest first, with the most recent entry last.
 When the psyche speaks vision, log it before acting on it.
 Psyche not logged in the moment is psyche at risk of drift.
