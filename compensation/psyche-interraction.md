@@ -66,8 +66,6 @@ A book carries no "unknown" where a measurement is possible; the measurement is 
 
 ## Authority
 
-What the living says he wants, with authority, as the way it has to be, is heard, carried out and incorporated, and holds from then on; it is never weighed against not doing it. What he says to discuss or to explain is discussed and explained. The flow judges which of the two it hears.
-
 A question authorizes an answer, not a change.
 A direct request authorizes its requested change.
 The kinds of skills and who stands behind each are in skill-designing.
