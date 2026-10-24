@@ -7,7 +7,7 @@ A synthesis carries each claim's origin, who found it, where, and
 whether it was witnessed, and marks the flow's own inference as the
 flow's.
 
-A source-equivalence claim uses the complete diff of the immutable revisions being compared and explains every production-code difference.
+A source-equivalence claim uses the complete diff of the immutable revisions compared and explains every production-code difference; a checkout’s cleanliness is no part of it.
 
 An exclusive tool policy is verified against the complete emitted allow and deny lists, including inherited profile restrictions.
 
