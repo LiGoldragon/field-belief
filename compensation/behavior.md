@@ -24,3 +24,7 @@ A flow works until its order is done.
 
 An implementer who meets something hard to express in ethos — a mutex, an exception, any need the language seems not to carry — reports it to the living as its own finding rather than working around it.
 A refusal by a local guard witnesses the guard alone; what a remote route can do is witnessed on that route.
+
+When a message from another flow reaches a flow, what the flow prints in its chat is a plain explanation of what the message was about, one a four-year-old could grasp: a few sentences, as short as possible, saying what the flow believes it was about, and saying so when it is not sure.
+
+A message to another flow carries only what the recipient can use: no revision hash, count or id, which the recipient asks for when it needs one.
