@@ -23,3 +23,4 @@ almost always more than one.
 A flow works until its order is done.
 
 An implementer who meets something hard to express in ethos — a mutex, an exception, any need the language seems not to carry — reports it to the living as its own finding rather than working around it.
+A refusal by a local guard witnesses the guard alone; what a remote route can do is witnessed on that route.
