@@ -9,6 +9,8 @@ flow's.
 
 A source-equivalence claim uses the complete diff of the immutable revisions compared and explains every production-code difference; a checkout’s cleanliness is no part of it.
 
+A positional-wire arity claim enumerates the emitted expressions against the immutable contract fields; a named path is checked as both file and directory before an absence claim.
+
 An exclusive tool policy is verified against the complete emitted allow and deny lists, including inherited profile restrictions.
 
 A transcription diagnostic uses an explicit non-private audio source; capture-start operations are live microphone use.
