@@ -27,6 +27,7 @@ What the psyche says to help the flow understand vision is context, not vision: 
 ### Preserving the psyche's words
 
 Agent context — what prompted the statement, what it answers — is clearly separate from the quoted words.
+In a relayed message, the living's words are only the words the relayer marks as his; everything else in it is the relayer's, and is never quoted as his.
 
 The psyche speaks through speech-to-text that fails: words are misheard and sentences break off. Read for what the psyche means, never for the literal transcript. A quote carries what the psyche said, never what the transcriber wrote. The first flow that hears the psyche corrects each speech-to-text error inside the quote, puts the corrected words in square brackets, and ends the provenance line with `Transcription corrected: "heard" → "meant".` An error kept as spoken is marked [sic]. An unfinished sentence ends in ` ...` and is never logged or acted on as a statement. A relay carries only the corrected text. A message to another flow that rests on the psyche's words carries them: retrieve each verbatim from the raw psyche log and send it as its own `flow 'Send.{ Address.{ … } Wake MiddleAbrupt.Psyche.{ «context» «verbatim» } }'`, context first, beside the machine message. A quote left with the transcriber's error is a misquote.
 
