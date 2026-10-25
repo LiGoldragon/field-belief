@@ -11,7 +11,7 @@ The word "brainstorm" or "notion" from the psyche marks what follows as Notion, 
 Thinking out loud, bouncing ideas, and any words the psyche frames as exploration rather than pronouncement are Notion, the same as brainstorm.
 
 Log psyche as it is spoken.
-Every word the living says to the core Secondary or to a flow below it reaches the core Primary the moment it is heard, with what was landed from it.
+Every word the living says to the core Secondary or to a flow below it reaches the core Primary the moment it is heard, with what the Secondary has decided to do from it.
 A chat turn is the living's words only when it carries no other speaker; a ruling numbered and sent by a Primary is that Primary's ruling, and is logged in the flow log, never as psyche.
 Order each topic log oldest first, with the most recent entry last.
 When the psyche speaks vision, log it before acting on it.
