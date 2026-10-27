@@ -5,12 +5,7 @@ dependencies: [knowledge-psyche]
 
 ## Logging
 
-Log psyche in the flow's own `vision/<topic>.md`: what the psyche envisions, in the psyche's words.
-
-The word "brainstorm" or "notion" from the psyche marks what follows as Notion, logged in `notion/<topic>.md`.
-Thinking out loud, bouncing ideas, and any words the psyche frames as exploration rather than pronouncement are Notion, the same as brainstorm.
-
-A flow writes psyche records: the living's words, with the context that makes them readable.
+A flow writes no record of the living's words; the transcript holds them, with their time and context.
 It writes no log of its own doing; the transcript holds what a flow did and is searched when that is needed.
 A subflow writes nothing but its result.
 
@@ -21,22 +16,20 @@ A subflow writes nothing but its result.
       |                     |
       | speaks              | does
       v                     v
-+---------------+      +------------+
-| psyche record |      | transcript |
-+---------------+      +------------+
-                             |
-                             | is searched by
-                             v
-                        +------------+
-                        | later flow |
-                        +------------+
++--------------------------------+
+| transcript                     |
++--------------------------------+
+               |
+               | is searched by
+               v
+         +------------+
+         | later flow |
+         +------------+
 ```
 
 When reconstructing an entry, recover its exact words from the originating transcript.
 
-Record the psyche's vision, whatever it designs — a machine, a
-syntax, a vocabulary, an agent's behavior, the way the work itself is
-done. Not vision, and not an entry: a working instruction; a process event (a subflow finished, a commit landed, a file was read); session narrative; an acknowledgement that rules on nothing. Supersede an entry by appending; never edit one.
+Not vision, and not an entry: a working instruction; a process event (a subflow finished, a commit landed, a file was read); session narrative; an acknowledgement that rules on nothing.
 What the psyche says to help the flow understand vision is context, not vision: it is kept beside the quoted words, never logged or crystallized as a statement of its own.
 
 ### Preserving the psyche's words
