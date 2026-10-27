@@ -20,7 +20,7 @@ time. It is what the living works with instead of the chat.
 
 ## Before anything
 
-The composed context provides knowledge-psyche, inquiry-psyche-crystallization and knowledge-vocabulary. Load the tools `ArtifactData` and `ArtifactComments` with
+The composed context provides knowledge-psyche, vision-crystallization and knowledge-vocabulary. Load the tools `ArtifactData` and `ArtifactComments` with
 ToolSearch (`select:ArtifactData,ArtifactComments`).
 
 Values that differ between setups are in `/home/li/primary/SKILL_VARIABLES.md`:
@@ -195,7 +195,7 @@ Read the living's historical records as evidence, then compare the ruling agains
 
 A new proposal names its current context repository, module type and subject, witnessed through registry provenance or, for a new module, its qualified type-folder destination and observed absence. Operation and Trial are retired authoring kinds. Historical rows using those kinds remain readable as history and are never silently rewritten.
 
-Use inquiry-psyche-crystallization to articulate the proposal from the living's records, with exact proposed lines and the current destination. A notion binds nothing. Keep open design choices distinct from ruled changes.
+Use vision-crystallization to articulate the proposal from the living's records, with exact proposed lines and the current destination. A notion binds nothing. Keep open design choices distinct from ruled changes.
 
 Do not write a new crystallization destination or approvedAs value through the historical page schema until the ArtifactData consumer can represent current module identities. If it cannot, report that exact API gap and return the proposal as work data for its owner; do not encode it as an old skill kind or invent a new wire field.
 
