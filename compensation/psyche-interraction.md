@@ -10,13 +10,27 @@ Log psyche in the flow's own `vision/<topic>.md`: what the psyche envisions, in 
 The word "brainstorm" or "notion" from the psyche marks what follows as Notion, logged in `notion/<topic>.md`.
 Thinking out loud, bouncing ideas, and any words the psyche frames as exploration rather than pronouncement are Notion, the same as brainstorm.
 
-Log psyche as it is spoken.
-Every word the living says to the core Secondary or to a flow below it reaches the core Primary the moment it is heard, with what the Secondary has decided to do from it.
-A chat turn is the living's words only when it carries no other speaker; a ruling numbered and sent by a Primary is that Primary's ruling, and is logged in the flow log, never as psyche.
-Order each topic log oldest first, with the most recent entry last.
-When the psyche speaks vision, log it before acting on it.
-Psyche not logged in the moment is psyche at risk of drift.
-Do not batch — each statement is one write.
+A flow writes psyche records: the living's words, with the context that makes them readable.
+It writes no log of its own doing; the transcript holds what a flow did and is searched when that is needed.
+A subflow writes nothing but its result.
+
+```
++------------+          +--------+
+| living     |          | flow   |
++------------+          +--------+
+      |                     |
+      | speaks              | does
+      v                     v
++---------------+      +------------+
+| psyche record |      | transcript |
++---------------+      +------------+
+                             |
+                             | is searched by
+                             v
+                        +------------+
+                        | later flow |
+                        +------------+
+```
 
 When reconstructing an entry, recover its exact words from the originating transcript.
 
