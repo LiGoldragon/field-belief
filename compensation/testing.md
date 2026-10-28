@@ -10,8 +10,8 @@ where order matters.
 Every build, test and compile runs on the configured remote
 builder, NixBuilder; the laptop keeps to lightweight inspection and
 orchestration. Outside a condition `compensation-temporary` declares, a
-failed remote route is a concrete blocker, never a reason to fall back
-to local compilation or a heavy local test run. Remote compilation alone
+failed remote route is a concrete blocker, reported as one and resolved remotely.
+Remote compilation alone
 does not prove that evaluation ran remotely.
 
 Run acceptance checks against the exact immutable published revision
@@ -24,16 +24,14 @@ Infrastructure reports are ground: a build reported green is green, wherever it 
 Expose every durable test through a Nix check.
 Keep stateful test requirements explicit.
 
-A test runs the machinery and observes what it does. A test that
-searches or compares source text is a change-detector: it fails on
-any edit and catches no behavior — never write one. Text may be
+A test runs the machinery and observes what it does. A test exercises
+behavior through the code's interface. Text may be
 asserted only where the text is itself the product, as generated
 output against its authored source.
 
 A new test is seen failing once before it is trusted.
-The expected value comes from outside the code under test; a test
-that computes it through the tested path confirms nothing.
-A test waits on the tested event, never on the clock.
-Tests share no mutable state — no process environment, no working
-directory, no order between them.
-A run that may exhaust memory or time is bounded (a memory cap and a timeout) so that it cannot take the harness down with it.
+The expected value comes from outside the code under test.
+A test waits on the tested event. Each test owns its state: its
+environment, its working
+directory, and a result independent of the order it runs in.
+A run that may exhaust memory or time is bounded (a memory cap and a timeout) so that the harness outlives it.
