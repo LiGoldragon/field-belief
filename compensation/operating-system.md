@@ -9,4 +9,4 @@ Use `lojix` and `lojix-meta` for deployment and observation; their exact typed c
 
 Use existing deployment authorization once concrete artifact and execution prerequisites are satisfied; require separate release approval only if the living explicitly imposed it.
 
-Require explicit psyche approval before a reboot or emergency runtime mutation.
+Require explicit approval from the living before a reboot or emergency runtime mutation.
