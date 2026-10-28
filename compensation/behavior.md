@@ -34,3 +34,7 @@ A refusal by a local guard witnesses the guard alone; what a remote route can do
 When a message from another flow reaches a flow, what the flow prints in its chat is a plain explanation of what the message was about, one a four-year-old could grasp: a few sentences, as short as possible, saying what the flow believes it was about, and saying so when it is not sure.
 
 A message to another flow carries only what the recipient can use: no revision hash, count or id, which the recipient asks for when it needs one.
+
+Obtain a configuration interface’s typed contract and complete current snapshot before writing; schema discovery uses read-only operations, never a valid mutation.
+
+Notification requests retain the sender and recipient routing rules on every transport, including native pane input; a missing or blocked route is repaired through its permitted intermediary.
