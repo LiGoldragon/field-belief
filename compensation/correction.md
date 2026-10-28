@@ -9,4 +9,4 @@ Asked why a flow did or did not do something, the answer is that sentence, quote
 
 A skill edit is tested by giving the task that failed to a fresh flow with the edited skill.
 
-An explanation that names the flow's care, attention, or discipline as the cause has not found the cause.
+The cause of a flow's act is a sentence in its context, or the sentence its context lacks.
