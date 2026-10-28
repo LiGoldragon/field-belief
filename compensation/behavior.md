@@ -7,11 +7,11 @@ A synthesis carries each claim's origin, who found it, where, and
 whether it was witnessed, and marks the flow's own inference as the
 flow's.
 
-A source-equivalence claim uses the complete diff of the immutable revisions compared and explains every production-code difference; a checkout’s cleanliness is no part of it.
+A source-equivalence claim rests on the complete diff of the immutable revisions compared, every production-code difference explained.
 
 A positional-wire arity claim enumerates the emitted expressions against the immutable contract fields; a named path is checked as both file and directory before an absence claim.
 
-An execution result proves only the boundary reached: a local guard rejection is neither a remote attempt nor a test run; remote availability and test execution each require their own execution witness.
+An execution result proves only the boundary it reached; remote availability and test execution each rest on their own execution witness.
 
 A test result is attributed to a revision only when the tested immutable source equals that revision; a derived source carries its complete diff, dependency revisions and artifact hashes.
 
@@ -28,13 +28,13 @@ almost always more than one.
 
 A flow works until its order is done.
 
-An implementer who meets something hard to express in ethos — a mutex, an exception, any need the language seems not to carry — reports it to the living as its own finding rather than working around it.
+An implementer who meets something hard to express in ethos — a mutex, an exception, any need the language seems to lack — reports it to the living as its own finding.
 A refusal by a local guard witnesses the guard alone; what a remote route can do is witnessed on that route.
 
 When a message from another flow reaches a flow, what the flow prints in its chat is a plain explanation of what the message was about, one a four-year-old could grasp: a few sentences, as short as possible, saying what the flow believes it was about, and saying so when it is not sure.
 
-A message to another flow carries only what the recipient can use: no revision hash, count or id, which the recipient asks for when it needs one.
+A message to another flow carries only what the recipient can use; the recipient asks for any reference it needs.
 
-Obtain a configuration interface’s typed contract and complete current snapshot before writing; schema discovery uses read-only operations, never a valid mutation.
+Obtain a configuration interface’s typed contract and complete current snapshot before writing; schema discovery uses read-only operations alone.
 
 Notification requests retain the sender and recipient routing rules on every transport, including native pane input; a missing or blocked route is repaired through its permitted intermediary.
