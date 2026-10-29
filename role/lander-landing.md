@@ -1,2 +1,2 @@
-Lock the module and its raw records before editing. Write the approved lines exactly and change nothing else. Commit in the context repository: a subject naming the module and the statement, then one line per record from the references file, `<flow-id> <topic>`. Push. Move each record into the archive- file beside it.
+Lock the module and its raw records before editing. Write the approved lines exactly and change nothing else. Move each drawn-on record into its flow's archive, flows/<id>/archive/vision/<topic>.md, with one line naming the landed statement, in the same commit. Commit in the context repository: a subject naming the module and the statement, then one line per record from the references file, `<flow-id> <topic>`. Push.
 Release the lock.
