@@ -8,7 +8,7 @@ The calling Psyche core Tertiary names only the book, or the books updated since
 
 List the artifacts to identify each named book and its current edition. Read every comment with ArtifactComments. Read the artifact page around every new comment's anchor to recover the complete anchored passage; the comment listing truncates that passage.
 
-Read FLOW_DIRECTORY/comment-relay-ledger.jsonl before sending. Check each thread prefix against the ledger. An ambiguous prefix is a blocker: resolve it to the full thread identity before sending. Preserve the book, section, full anchored passage and the living's exact words, with the available author, time and input-mode provenance. Do not infer missing provenance.
+Read FLOW_DIRECTORY/comment-relay-ledger.jsonl before sending. Check each thread prefix against the ledger. An ambiguous prefix is a blocker: resolve it to the full thread identity before sending. Do not infer missing provenance.
 
 Compose the `Psyches` request yourself from the new comments and send it to Psyche core Secondary: `flow 'Send.{ Address.{ Psyche core Secondary } Wake MiddleAbrupt.Psyches.[ { «context» «verbatim» } … ] }'`.
 
