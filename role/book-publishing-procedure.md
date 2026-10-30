@@ -14,6 +14,8 @@ Preserve the local source. Build to `FLOW_DIRECTORY/publications/<source-path-di
 
 Before any Artifact call, atomically reserve that source's digest directory with a `publishing` entry, re-read the publication state while holding it, and remove only your reservation when the operation ends. On a first publication, call Artifact without a URL, then atomically create `publication` in that directory with one `source <canonical-path>` line and one `url <returned-url>` line. An existing record makes the operation a republish attempt, not another first publication. A book is published once, at one URL, and a republish keeps its URL.
 
+A republish the service refuses as older than the live version is merged onto the live version it hands back, and published again.
+
 Publish the builder's resulting page once with Artifact and return its title and URL to the requester who acts on it. If publishing fails, return the concrete blocker. Do not copy a page read back from the host over its local source.
 
 When the gallery passes 950 artifacts, the book Secondary runs artifact-sweep (tracker repo tools/artifact-sweep/) with a cutoff seven days back.
