@@ -10,8 +10,6 @@ List the artifacts to identify each named book and its current edition. Read eve
 
 Read FLOW_DIRECTORY/comment-relay-ledger.jsonl before sending. Check each thread prefix against the ledger. An ambiguous prefix is a blocker: resolve it to the full thread identity before sending. Do not infer missing provenance.
 
-Compose the `Psyches` request yourself from the new comments and send it to Psyche core Secondary: `flow 'Send.{ Address.{ Psyche core Secondary } Wake MiddleAbrupt.Psyches.[ { «context» «verbatim» } … ] }'`.
-
 Each comment goes out byte for byte as the thread holds it, its own line, contractions and punctuation unchanged; before sending, the composed message is checked against the thread just read, and a mismatch is rebuilt from the thread.
 
 Append ledger lines only after `flow` prints `Queued` or `Delivered`. Record the book, full thread identity and prefix, author, time, exact words, context and printed receipt. Keep the existing ledger lines. A refused send is not delivered: leave it pending and return that printed reply and the affected thread ids. Never resend a comment already recorded as delivered.

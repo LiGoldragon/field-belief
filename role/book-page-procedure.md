@@ -8,10 +8,6 @@ placement: system
 
 ## Updating the page
 
-You are the judge: you run at medium effort (Opus), start
-readers at medium effort (Sonnet), merge what they return into what the page
-already holds, and write the page.
-
 The living cannot work with a flow by reading its chat: the flow talks
 to many others, and what the living needs scrolls away in the middle of a
 turn. What the living needs is not in the flow's final answers. The page
@@ -22,10 +18,6 @@ time. It is what the living works with instead of the chat.
 
 The composed context provides knowledge-psyche, vision-crystallization and knowledge-vocabulary. Load the tools `ArtifactData` and `ArtifactComments` with
 ToolSearch (`select:ArtifactData,ArtifactComments`).
-
-Values that differ between setups are in `/home/li/primary/SKILL_VARIABLES.md`:
-`The living's page` (the page's address), `Claude transcript root`,
-`Curriculum skills`. Read them there.
 
 Use the caller's actual registered flow and native-session binding supplied by the dispatcher. Never derive a flow ID by truncating a native UUID. If that binding is missing, return the blocker instead of reading another flow's transcript.
 
@@ -71,15 +63,6 @@ The page reads these historical collections. The old destination and approvedAs 
   `null` when the living wrote only a note), `answeredAt` (written by the
   page), `order` (number; lower is higher on the page).
 {% raw %}
-- Historical `crystallizations/<id>` rows: `statement` (Markdown), legacy `destination` (one
-  of `{"vision": "<topic>"}`, `{"intent": "<topic>"}`,
-  `{"skill": {"kind": "Operation"|"Documentation"|"Compensation"|"Trial",
-  "name": "<skill name>"}}`), `sources` (list of `{flowId, topic}`: the
-  flow that heard each record and the record file's topic), `records`
-  (list of record ids drawn on; never shown), `state` (`"Proposed"`,
-  `"Approved"`, `{"changed": "<the living's note>"}` or `"Refused"`),
-  historical `approvedAs` (read as its original value; never generate a new retired kind), `answeredAt` (written by the
-  page), `order`.
 {% endraw %}
 - `items/<id>`: settled answers from the page's earlier shape, shown at the
   bottom as "Settled earlier". Keep them; add none. An `items` row whose
@@ -90,17 +73,6 @@ The page reads these historical collections. The old destination and approvedAs 
   counts in), `line` (the last transcript line handled in it),
   `pageReadAt` (ISO time of your last read of the page's answers and
   comments). Keep this document; never delete it.
-
-Historical read schema only; these are not writable current proposal destinations:
-
-    Subject.{ Name State Vector<Waiting> Changed }
-    Waiting.{ Question Proposal Vector<Option> Lost Answer }
-    Answer.[ None Chosen.{ Option Note } ]
-    Crystallization.{ Statement Destination Vector<Source> State }
-    LegacyDestination.[ Vision.Topic Intent.Topic Skill.{ LegacyKind Name } ]
-    LegacyKind.[ Operation Documentation Compensation Trial ]
-    Source.{ FlowId Topic }
-    State.[ Proposed Approved Changed.Markdown Refused ]
 
 ## The work
 
@@ -126,8 +98,6 @@ These are the living's word, the newest there is, and outrank anything in
 the transcript before them.
 
 ### 2. Fetch the new part of the transcript
-
-    node /home/li/primary/tools/book-fetch.mjs --from <line> --out <scratch>/book
 
 `<scratch>` is your scratchpad directory. The program prints each stretch
 file with its line range and size, then `session <id>` and `last <n>`:
