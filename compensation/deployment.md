@@ -26,6 +26,8 @@ Stable is the systemd user unit declared in `The user environment`, `modules/hom
 
 Flow requires Curriculum; Message starts, stops and restarts with Flow.
 
+An activation that changes the tools every flow calls, flow and herdr among them, is witnessed before and after from a fresh login shell by flow Metaflows and the herdr pane list, and is rolled back at once on a difference.
+
 ```sh
 systemctl --user restart flow-nexus.service
 systemctl --user restart orchestrate-nexus.service
