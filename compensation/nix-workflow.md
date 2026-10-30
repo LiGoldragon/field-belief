@@ -16,4 +16,5 @@ Test with binaries and scripts packaged by Nix.
 A Rust runtime has its own Rust-only repository, holding only what compiling its executable or library needs; mutable data and content live in separate data inputs or repositories, so Rust compilation stays cached across data changes. A Rust executable repository holds Rust alone; everything else changes in its own repository.
 Treat managed output as evidence; change it at its source.
 Keep evaluation and activation evidence separate.
+A file Home Manager declares is never created or removed by hand; the wanted generation activation reconciles it, and a stale link is answered by re-running that activation.
 A check of the Prometheus builder goes through the nix daemon as the build user; a direct ssh probe costs a penalty that drops live builds.
