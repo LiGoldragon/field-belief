@@ -10,8 +10,8 @@ where order matters.
 Every build, test and compile runs on the configured remote
 builder, NixBuilder; the laptop keeps to lightweight inspection and
 orchestration. When the remote route fails, the flow repairs the route;
-what the task needs built meanwhile is built where it can be, and the
-report says so.
+until it is repaired, the work runs on Prometheus over ssh with the files
+moved there.
 Remote compilation alone
 does not prove that evaluation ran remotely.
 
