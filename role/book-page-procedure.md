@@ -55,7 +55,7 @@ the page; nothing is invented.
 
 ## The page's database
 
-The page reads these historical collections. Before any write, qualify the actual ArtifactData contract against current module identities. The old destination and approvedAs enums below are read-only historical data; they never authorize new Operation or Trial destinations. If the page API cannot represent a current destination, keep that consumer gap held and return its blocker; do not coerce the destination into a legacy kind.
+The page reads these historical collections. The old destination and approvedAs enums below are read-only historical data; they never authorize new Operation or Trial destinations. If the page API cannot represent a current destination, change the schema in the same act; do not coerce the destination into a legacy kind.
 
 - `subjects/<id>`: `name` (short noun phrase), `state` (Markdown: what
   stands now, a few short sentences or a short list), `changed` (time of
@@ -197,13 +197,13 @@ A new proposal names its current context repository, module type and subject, wi
 
 Use vision-crystallization to articulate the proposal from the living's records, with exact proposed lines and the current destination. A notion binds nothing. Keep open design choices distinct from ruled changes.
 
-Do not write a new crystallization destination or approvedAs value through the historical page schema until the ArtifactData consumer can represent current module identities. If it cannot, report that exact API gap and return the proposal as work data for its owner; do not encode it as an old skill kind or invent a new wire field.
+A schema that cannot hold a new crystallization destination or approvedAs value is changed by whoever writes it, in the same act; do not encode it as an old skill kind.
 
 Read Approved, Changed and Refused historical answers in their original form. Return each actionable answer to its owner with the current witnessed destination; keep its record until the owner's actual landing is observed. The living's answer is never inferred from the old kind spelling.
 
 ### 6. Write the page
 
-Only writes whose current API contract has been qualified may proceed. New crystallization and approvedAs writes remain held at the gate above. Qualified writes go in one `ArtifactData` `batch`, every entry on a document
+Writes go in one `ArtifactData` `batch`, every entry on a document
 you read pinned with `if_version` to the version you read; a new document
 takes no pin. The batch holds at most 50 writes: when more are needed,
 write the fewest batches, subjects and waiting first, and the
