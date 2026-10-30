@@ -62,8 +62,6 @@ The page reads these historical collections. The old destination and approvedAs 
   (`null`, or `{option, note}` written by the page; `option` may be
   `null` when the living wrote only a note), `answeredAt` (written by the
   page), `order` (number; lower is higher on the page).
-{% raw %}
-{% endraw %}
 - `items/<id>`: settled answers from the page's earlier shape, shown at the
   bottom as "Settled earlier". Keep them; add none. An `items` row whose
   `state` is `open`, and any row in `news`, is left from the earlier shape:
