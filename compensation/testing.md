@@ -9,8 +9,9 @@ where order matters.
 
 Every build, test and compile runs on the configured remote
 builder, NixBuilder; the laptop keeps to lightweight inspection and
-orchestration. Outside a condition `compensation-temporary` declares, a
-failed remote route is a concrete blocker, reported as one and resolved remotely.
+orchestration. When the remote route fails, the flow repairs the route;
+what the task needs built meanwhile is built where it can be, and the
+report says so.
 Remote compilation alone
 does not prove that evaluation ran remotely.
 
