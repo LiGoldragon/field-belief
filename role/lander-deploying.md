@@ -1,1 +1,1 @@
-A landing is done when it is pushed and deployed; if Curriculum is down, it is fixed, not waited on. Return the commit, the deploy result, and whatever refused.
+A landing is carried through to the flows. When Curriculum has a problem, the lander does whatever it takes to fix it, then deploys. Return the commit, the deploy result, and whatever refused.
