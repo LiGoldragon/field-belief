@@ -14,8 +14,9 @@ already holds, and write the page.
 
 The living cannot work with a flow by reading its chat: the flow talks
 to many others, and what the living needs scrolls away in the middle of a
-turn. What the living needs is not in the flow's final answers. The page
-is made from everything in the transcript, arranged by subject, never by
+turn. What the living needs is not in the flow's final answers. The calling
+flow writes the page's new part to a file and names its path in the brief.
+Read that file and merge it into the page, arranged by subject, never by
 time. It is what the living works with instead of the chat.
 
 ## Before anything
@@ -24,10 +25,10 @@ The composed context provides knowledge-psyche, vision-crystallization and knowl
 ToolSearch (`select:ArtifactData,ArtifactComments`).
 
 Values that differ between setups are in `/home/li/primary/SKILL_VARIABLES.md`:
-`The living's page` (the page's address), `Claude transcript root`,
-`Curriculum skills`. Read them there.
+`The living's page` (the page's address), `Curriculum skills`. Read them there.
 
-Use the caller's actual registered flow and native-session binding supplied by the dispatcher. Never derive a flow ID by truncating a native UUID. If that binding is missing, return the blocker instead of reading another flow's transcript.
+The brief names the file containing the page's new part. Read that file as
+the calling flow's input.
 
 You change nothing but the page's rows. You write no file outside your
 scratch directory, send no message, commit nothing, and never republish
@@ -37,9 +38,9 @@ the page's code.
 
 The present state of everything in the flow, by subject.
 
-- Made from the whole transcript: what the living said, everything the
-  flow said, mid-turn as well as last, what workers returned, what other
-  flows sent, what was done.
+- Made from the page as it stands and the new part in the named file: what
+  the living said, everything the flow said, mid-turn as well as last, what
+  workers returned, what other flows sent, what was done.
 - Where two things contradict, the most recent wins, whoever said it. What
   is overtaken leaves the page.
 - What waits on the living's word is on top.
@@ -50,7 +51,7 @@ Every word on the page is plain prose for the living: the
 living's vocabulary (flow, flow, machine, the living; the names of flows,
 hosts, tools and repositories as the living uses them). No identifiers,
 hashes, record ids, line numbers or paths in any text the living reads.
-Every fact, number and quotation comes from the transcript, the records or
+Every fact, number and quotation comes from the input file, the records or
 the page; nothing is invented.
 
 ## The page's database
@@ -59,7 +60,7 @@ The page reads these historical collections. The old destination and approvedAs 
 
 - `subjects/<id>`: `name` (short noun phrase), `state` (Markdown: what
   stands now, a few short sentences or a short list), `changed` (time of
-  the transcript line the state rests on, `YYYY-MM-DDTHH:MM`, UTC). The
+  the input entry the state rests on, `YYYY-MM-DDTHH:MM`, UTC). The
   page sorts subjects by `changed`, newest first. Ids are short lowercase
   slugs, stable across runs.
 - `waiting/<id>`: one thing that waits on the living's word. `subject`
@@ -86,8 +87,7 @@ The page reads these historical collections. The old destination and approvedAs 
   `state` is `open`, and any row in `news`, is left from the earlier shape:
   read it as input, carry what still stands into subjects or waiting, and
   delete it.
-- `state/transcript`: `session` (the session whose transcript `line`
-  counts in), `line` (the last transcript line handled in it),
+- `state/input`: `path` (the last named input file handled),
   `pageReadAt` (ISO time of your last read of the page's answers and
   comments). Keep this document; never delete it.
 
@@ -106,46 +106,24 @@ Historical read schema only; these are not writable current proposal destination
 
 ### 1. Read the page
 
-`get` `state/transcript`. `list` every collection above (with `out_dir`
+`get` `state/input`. `list` every collection above (with `out_dir`
 in your scratch directory when large) and keep each document's `version`.
 Read every comment thread with `ArtifactComments` `read`.
 
-The mark is `line`, and it counts only in its `session`. When `session`
-is the calling session, fetch from `line`. When `session` is another
-session or absent, the page is carried on by a new session (a restarted
-flow): fetch this transcript from its beginning, `--from 0`, and merge it
-into the page as it stands, like any new part; nothing on the page is
-rebuilt or dropped for it. Without a `line`, this is the first making:
-read the whole transcript. `pageReadAt` absent means everything the
-living did on the page is new.
+Read the file whose path the brief names. It is the calling flow's new
+page part; merge it into the page as it stands. `pageReadAt` absent means
+everything the living did on the page is new.
 
 Collect what the living did on the page since `pageReadAt`: every
 `waiting` row with `answeredAt` later than it, every `crystallizations` row
 with `answeredAt` later than it, every comment written later than it.
 These are the living's word, the newest there is, and outrank anything in
-the transcript before them.
+the input file before them.
 
-### 2. Fetch the new part of the transcript
+### 2. Read the new part
 
-    node /home/li/primary/tools/book-fetch.mjs --from <line> --out <scratch>/book
-
-`<scratch>` is your scratchpad directory. The program prints each stretch
-file with its line range and size, then `session <id>` and `last <n>`:
-the new mark. Each entry in a stretch starts with its transcript line and
-time; kinds are `TYPED`, `MESSAGE from <flow>`, `WORKER RESULT`, `FLOW`,
-`TOOL`, `COMPACTED` and `COMPACTION SUMMARY`.
-
-Last, whatever `--from` was, it prints `latest-block L<n>` and the full
-text of the flow's last to-the-living block, from
-`<!-- to-the-living:start -->` to `<!-- to-the-living:end -->`, uncapped
-and undeduped; or `latest-block none`. When the brief asks for a block
-that the stretches lack, use the `latest-block` text if it is the one the
-brief names. If its title differs, the block was never written into the
-transcript as text: return that, with the line and title `latest-block`
-gave, and never call the block absent from a range alone.
-
-`nothing new` and nothing done on the page: return "Nothing new." and
-stop without writing.
+Read the named input file. If it is empty and nothing was done on the page,
+return "Nothing new." and stop without writing.
 
 ### 3. Read the stretches
 
@@ -184,7 +162,7 @@ whoever said it. Then:
   line overtook is rewritten to the later shape, or deleted when nothing of
   it still waits.
 - An answered `waiting` row stays, so the living sees the answer under its
-  subject, until the transcript shows the flow took it up. Then it is
+  subject, until the input shows the flow took it up. Then it is
   deleted and the subject's state says what came of it.
 - A comment of the living is the living's word on what it is anchored to:
   fold it into the subject or question it concerns.
@@ -207,15 +185,14 @@ Writes go in one `ArtifactData` `batch`, every entry on a document
 you read pinned with `if_version` to the version you read; a new document
 takes no pin. The batch holds at most 50 writes: when more are needed,
 write the fewest batches, subjects and waiting first, and the
-`state/transcript` update last, in the final batch.
+`state/input` update last, in the final batch.
 
 - `set` a new or rewritten row, `update` a changed field, `delete` an
   overtaken row.
 - Never write `answer`, `answeredAt` or `approvedAs` except to clear them
   on a changed crystallization; those are the living's.
-- The last write: `update` `state/transcript` with `session` set to the
-  printed `session`, `line` set to the printed `last`, and `pageReadAt`
-  set to the time you read the page in step 1.
+- The last write: `update` `state/input` with `path` set to the named input
+  file and `pageReadAt` set to the time you read the page in step 1.
 
 A pinned write that fails means the living changed that row while you
 worked: re-read it, merge the living's change (the living's is newer
