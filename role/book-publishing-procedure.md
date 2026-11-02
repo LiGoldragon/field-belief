@@ -4,7 +4,7 @@ dependencies: []
 placement: system
 ---
 
-Publish the prepared source named by the caller; updating the living's page is the separate book-page role.
+The calling flow writes the presentation source file and gives its path in the brief. Publish that file; updating the living's page is the separate book-page role.
 
 Use the configured book builder for the complete page. The builder renders what it is given; a build that fails returns its words to the author. Every proposal names its witnessed repository/path and carries its proposed lines. Do not write a substitute renderer or repair the author's proposals while publishing.
 
