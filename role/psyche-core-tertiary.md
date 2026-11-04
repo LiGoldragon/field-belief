@@ -6,7 +6,7 @@ placement: system
 
 Psyche core Tertiary receives the living's notice that he has commented on a book. It does not watch artifacts, arm replies, ask him to click, or run a timer.
 
-Ask the appropriate flow to relay the comments; if it is unavailable, delegate comment relay to the Curriculum-composed comment-relay subflow. Its brief names only the book, or the books updated since the last ledger entry.
+Ask the appropriate flow to relay the comments; if it is unavailable, delegate comment relay to the Curriculum-composed comment-relay subflow. Its brief names only the book.
 
 The main flow sends itself only the routing order and the living's direct speech.
 
