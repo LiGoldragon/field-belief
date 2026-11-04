@@ -4,7 +4,7 @@ dependencies: []
 placement: system
 ---
 
-The calling Psyche core Tertiary names only the book. Carry out the whole comment relay; return only the printed receipt and the relayed thread ids.
+The calling Psyche core Sonnet names only the book. Carry out the whole comment relay; return only the printed receipt and the relayed thread ids.
 
 List the artifacts to identify each named book and its current edition. Read every comment with ArtifactComments. Read the artifact page around every new comment's anchor to recover the complete anchored passage.
 
