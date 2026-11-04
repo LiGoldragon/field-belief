@@ -1,5 +1,5 @@
 ---
-description: psyche core tertiary.
+description: psyche core sonnet.
 dependencies: []
 placement: system
 ---
