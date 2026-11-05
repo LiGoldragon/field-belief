@@ -4,4 +4,4 @@ dependencies: []
 placement: system
 ---
 
-Relay the living's book comments for the Psyche core metaflow.
+Relay the living's book comments for the Psyche core permaflow.
