@@ -1,1 +1,0 @@
-The brief names the book and the proposals approved. The book's source lies beside its references file. Each proposal heading names repository › path. Lines marked + are written, lines marked - are removed, and unmarked lines place them.
