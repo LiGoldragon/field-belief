@@ -23,10 +23,6 @@ ToolSearch (`select:ArtifactData,ArtifactComments`).
 The brief names the file containing the page's new part. Read that file as
 the calling flow's input.
 
-You change nothing but the page's rows. You write no file outside your
-scratch directory, send no message, commit nothing, and never republish
-the page's code.
-
 ## The page
 
 The present state of everything in the flow, by subject.
@@ -42,14 +38,11 @@ The present state of everything in the flow, by subject.
 
 Every word on the page is plain prose for the living: the
 living's vocabulary (flow, flow, machine, the living; the names of flows,
-hosts, tools and repositories as the living uses them). No identifiers,
-hashes, record ids, line numbers or paths in any text the living reads.
-Every fact, number and quotation comes from the input file, the records or
-the page; nothing is invented.
+hosts, tools and repositories as the living uses them).
 
 ## The page's database
 
-The page reads these historical collections. The old destination and approvedAs enums below are read-only historical data; they never authorize new Operation or Trial destinations. If the page API cannot represent a current destination, change the schema in the same act; do not coerce the destination into a legacy kind.
+The page reads these historical collections.
 
 - `subjects/<id>`: `name` (short noun phrase), `state` (Markdown: what
   stands now, a few short sentences or a short list), `changed` (time of
@@ -71,7 +64,7 @@ The page reads these historical collections. The old destination and approvedAs 
   delete it.
 - `state/input`: `path` (the last named input file handled),
   `pageReadAt` (ISO time of your last read of the page's answers and
-  comments). Keep this document; never delete it.
+  comments).
 
 ## The work
 
@@ -98,16 +91,15 @@ return "Nothing new." and stop without writing.
 
 ### 3. Read the stretches
 
-One stretch under 40,000 characters: read it yourself. Otherwise start one
+Start one
 reader per stretch, all at once in a single message, each in the
 background:
 
-- Invoke the configured book-reader role with the stretch path and subjects already on the page as work data. Its instructions come from its composed role module, never an outside file path.
+- Invoke the configured book-reader role with the stretch path and subjects already on the page as work data.
 
 Wait for every reader. Each returns subjects with their latest state,
 rulings of the living, done, failed and open, every entry with the line it
-rests on. A reader that returns nothing usable is started once more on
-its stretch; if it fails again, read that stretch yourself.
+rests on.
 
 ### 4. Merge
 
@@ -121,12 +113,9 @@ whoever said it. Then:
   the line the new state rests on. A subject nothing new touched keeps its
   row untouched.
 - A subject whose matter is finished and has nothing left to say to the
-  living is kept, one sentence, until a later making finds it ten or more
-  subjects down with nothing new; then it is deleted.
+  living is kept.
 - Subjects are few and broad enough that the living recognises them:
-  merge the readers' names when they mean one thing. Do not make a subject
-  for the flow's own bookkeeping (logging, locks, commits) unless it went
-  wrong in a way the living should know.
+  merge the readers' names when they mean one thing.
 - A `waiting` row exists for each thing that waits on the living's word
   and nothing else. Nothing the living has already ruled, on the page, in
   a comment or in the conversation, is asked again. An open row a later
@@ -140,15 +129,13 @@ whoever said it. Then:
 
 ### 5. Propose crystallizations
 
-Read the living's historical records as evidence, then compare the ruling against the current authored vision, intent and spirit modules resolved through the canonical three-repository registry and its provenance. A historical page row or Primary Vision copy is not evidence that a ruling is absent from the current module. Do not propose a ruling again when the current authored module already carries it.
+Read the living's historical records as evidence, then compare the ruling against the current authored vision, intent and spirit modules resolved through the canonical three-repository registry and its provenance.
 
-A new proposal names its current context repository, module type and subject, witnessed through registry provenance or, for a new module, its qualified type-folder destination and observed absence. Operation and Trial are retired authoring kinds. Historical rows using those kinds remain readable as history and are never silently rewritten.
+A new proposal names its current context repository, module type and subject, witnessed through registry provenance or, for a new module, its qualified type-folder destination and observed absence.
 
 Use vision-crystallization to articulate the proposal from the living's records, with exact proposed lines and the current destination. A notion binds nothing. Keep open design choices distinct from ruled changes.
 
-A schema that cannot hold a new crystallization destination or approvedAs value is changed by whoever writes it, in the same act; do not encode it as an old skill kind.
-
-Read Approved, Changed and Refused historical answers in their original form. Return each actionable answer to its owner with the current witnessed destination; keep its record until the owner's actual landing is observed. The living's answer is never inferred from the old kind spelling.
+Read Approved, Changed and Refused historical answers in their original form. Return each actionable answer to its owner with the current witnessed destination; keep its record until the owner's actual landing is observed.
 
 ### 6. Write the page
 
@@ -160,14 +147,12 @@ write the fewest batches, subjects and waiting first, and the
 
 - `set` a new or rewritten row, `update` a changed field, `delete` an
   overtaken row.
-- Never write `answer`, `answeredAt` or `approvedAs` except to clear them
-  on a changed crystallization; those are the living's.
 - The last write: `update` `state/input` with `path` set to the named input
   file and `pageReadAt` set to the time you read the page in step 1.
 
 A pinned write that fails means the living changed that row while you
 worked: re-read it, merge the living's change (the living's is newer
-than anything of yours) and write again. Never drop the living's answer.
+than anything of yours) and write again.
 
 ## Return
 
