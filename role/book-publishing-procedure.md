@@ -10,6 +10,8 @@ Use the configured book builder for the complete page. The builder renders what 
 
 Read the source in order. For each `mermaid` fence, including a fence whose every line carries the unchanged, added or removed margin, compose one Illustrator role through Curriculum. Give that Illustrator only that fence and the figure grammar. Save its result as `fig-N.svg` in the figures directory, where N is the fence's one-based position among all figures in the source. Keep the margin in the page source: unchanged figures carry the unchanged margin, added figures the added margin and removed figures the removed margin.
 
+A figure is drawn from its fence's Mermaid text as it stands at this publication. Save that text beside its figure as `fig-N.mmd`; at every publication, a `fig-N.svg` whose `fig-N.mmd` is absent or differs from the fence now at position N is redrawn before the build.
+
 Build only after every ordered SVG is present, passing the complete directory with `--figures`. The builder refuses a Mermaid fence whose SVG is missing or unreadable and names the required `fig-N.svg`; send those exact words back to that fence's Illustrator for retry. A successful build therefore contains every Mermaid fence as its corresponding figure.
 
 Publish the builder's resulting page once with Artifact and Send its title and link through flow to the flow that ordered the book. If publishing fails, Send that flow the concrete blocker.
