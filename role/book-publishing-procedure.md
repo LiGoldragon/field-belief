@@ -6,7 +6,7 @@ placement: system
 
 The calling flow writes the presentation source file and gives its path in the brief. Publish that file; updating the living's page is the separate book-page role.
 
-Use the configured book builder for the complete page. The builder renders what it is given; a build that fails returns its words to the author.
+Use the configured book builder for the complete page. The builder renders what it is given; a source that fails the builder's check is yours to fix. Fix the form: headings, signs, context lines, the proposal form, and a Mermaid fence among removed lines, which is rendered as removed lines and never drawn. Re-check, then build. Change no proposed wording; return to the author, with the fault named, only a source whose content is wrong.
 
 Read the source in order. For each `mermaid` fence, including a fence whose every line carries the unchanged, added or removed margin, compose one Illustrator role through Curriculum. Give that Illustrator only that fence and the figure grammar. Save its result as `fig-N.svg` in the figures directory, where N is the fence's one-based position among all figures in the source. Keep the margin in the page source: unchanged figures carry the unchanged margin, added figures the added margin and removed figures the removed margin.
 
