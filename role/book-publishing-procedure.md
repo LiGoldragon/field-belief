@@ -15,3 +15,5 @@ Build only after every ordered SVG is present, passing the complete directory wi
 Publish the builder's resulting page once with Artifact and Send its title and link through flow to the flow that ordered the book. If publishing fails, Send that flow the concrete blocker.
 
 Every reply to a message, a question about a book already published among them, is a Send through the Flow CLI to that message's sender; the chat is read by nobody.
+
+A comment of the living relayed to a flow carries the proposal's title, the place commented on, and his words whole, and no hash or URL.
