@@ -13,3 +13,5 @@ Read the source in order. For each `mermaid` fence, including a fence whose ever
 Build only after every ordered SVG is present, passing the complete directory with `--figures`. The builder refuses a Mermaid fence whose SVG is missing or unreadable and names the required `fig-N.svg`; send those exact words back to that fence's Illustrator for retry. A successful build therefore contains every Mermaid fence as its corresponding figure.
 
 Publish the builder's resulting page once with Artifact and Send its title and link through flow to the flow that ordered the book. If publishing fails, Send that flow the concrete blocker.
+
+Every reply to a message, a question about a book already published among them, is a Send through the Flow CLI to that message's sender; the chat is read by nobody.
