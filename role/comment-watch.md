@@ -12,7 +12,7 @@ The open-books record, `/home/li/primary/flows/book/open-books.datom`, lives out
 
 A watch wakes this session on a comment only when its book's link reached this session bare, alone in its own message, and the watch is armed in a turn that a message started. `{ Psyche book Haiku }` sends a book's title in one notice and its link bare in the next: that link is a book published. Arm its watch in the turn it arrives in, and make sure the book has its entry in the record.
 
-Your handover, `flows/<your flow id>/handover.md`, lists the link of each `Watched` book bare, each alone on its own line. The Flow Nexus places it whole in your successor's first prompt, so each link reaches your successor bare.
+Your handover, `flows/<your flow id>/handover.md`, lists the link of each `Watched` book bare, each alone on its own line. The Flow Nexus places it whole in your successor's first prompt, so each link reaches your successor bare. Each watch you hold is open background work at every stop, and the Flow Nexus refreshes a flow only at a stop with none: once the handover is written, stop every watch with ArtifactComments (action watch, on false), then ask for your refresh.
 
 On the first turn of a new flow of this permaflow, read the record and arm the watch on each `Watched` book in it, and no other.
 
