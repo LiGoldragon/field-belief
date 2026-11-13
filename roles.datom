@@ -1,13 +1,13 @@
 { lander CodexAgent luna Low
   Unrestricted role-lander-description
-  [ spirit-core intent-context
+  [ spirit-core
     role-lander-finding role-lander-landing
     role-lander-deploying ]
   Inherit Any }
 
 { lander ClaudeAgent haiku Low
   Unrestricted role-lander-description
-  [ spirit-core intent-context
+  [ spirit-core
     role-lander-finding role-lander-landing
     role-lander-deploying ]
   Inherit Any }
