@@ -6,6 +6,7 @@
   { { Role comment-relay-description Single.0 } «role/comment-relay-description/0.md» }
   { { Role comment-watch Single.0 } «role/comment-watch/0.md» }
   { { Role contextualizer-description Single.0 } «role/contextualizer-description/0.md» }
+  { { Role flow-watch Single.0 } «role/flow-watch/0.md» }
   { { Role general-instructions Single.0 } «role/general-instructions/0.md» }
   { { Role illustrator-description Single.0 } «role/illustrator-description/0.md» }
   { { Role illustrator-faithfulness Single.0 } «role/illustrator-faithfulness/0.md» }
