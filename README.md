@@ -1,4 +1,4 @@
-# field-belief
+# field-pattern
 
 This repository holds the Field aspect's authored skill sources in
 `skills/`.
